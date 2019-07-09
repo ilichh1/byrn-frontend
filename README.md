@@ -1,4 +1,5 @@
-# vue-project
+# BRYN
+### (by CST)
 
 ## Project setup
 ```
