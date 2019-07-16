@@ -394,10 +394,10 @@
 </template>
 
 <script>
-import HeaderComponent from './HeaderComponent';
-import FooterComponent from './FooterComponent';
+import HeaderComponent from './HeaderComponent'
+import FooterComponent from './FooterComponent'
 
-import PropertyListingComponent from './shared-components/PropertyListingComponent';
+import PropertyListingComponent from './shared-components/PropertyListingComponent'
 
 const FEATURED_PROPERTIES = [
   {
@@ -444,12 +444,12 @@ const FEATURED_PROPERTIES = [
     is_favorite: false,
     visit_count: 64,
     address: 'Camino a la barranca 16, Colonia, Zapotlanejo, Jalisco'
-  },
-];
+  }
+]
 
 export default {
   name: 'home-component',
-  data() {
+  data () {
     return {
       featuredProperties: FEATURED_PROPERTIES
     }

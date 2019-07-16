@@ -1,3 +1,3 @@
 module.exports = {
-  assetsDir: "byrn-frontend/"
+  assetsDir: 'byrn-frontend/'
 }

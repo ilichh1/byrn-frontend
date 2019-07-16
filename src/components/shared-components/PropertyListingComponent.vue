@@ -21,7 +21,7 @@ export default {
   name: 'property-listing-component',
   props: {
     property: {
-      default() {
+      default () {
         return {
           id: 26,
           image: 'images/img_1.jpg',
@@ -30,7 +30,7 @@ export default {
           is_favorite: false,
           visit_count: 16,
           address: 'Camino a la barranca 16, Colonia, Zapotlanejo, Jalisco'
-        };
+        }
       }
     }
   }
