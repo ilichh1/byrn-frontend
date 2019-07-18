@@ -1,6 +1,5 @@
 <template>
   <div class="site-wrap">
-    <HeaderComponent/>
     <div class="site-blocks-cover overlay" style="background-image: url(images/summer-grass.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
@@ -389,15 +388,11 @@
         </div>
       </div>
     </div>
-    <FooterComponent/>
   </div>
 </template>
 
 <script>
-import HeaderComponent from './HeaderComponent'
-import FooterComponent from './FooterComponent'
-
-import PropertyListingComponent from './shared-components/PropertyListingComponent'
+import PropertyListingComponent from '../shared-components/PropertyListingComponent'
 
 const FEATURED_PROPERTIES = [
   {
@@ -455,8 +450,6 @@ export default {
     }
   },
   components: {
-    HeaderComponent,
-    FooterComponent,
     PropertyListingComponent
   }
 }
