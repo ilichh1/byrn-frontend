@@ -53,6 +53,6 @@
 
 <script>
 export default {
-  name: 'LoginComponent'
+  name: 'login-component'
 }
 </script>

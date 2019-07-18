@@ -392,7 +392,7 @@
 </template>
 
 <script>
-import PropertyListingComponent from '../shared-components/PropertyListingComponent'
+import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 
 const FEATURED_PROPERTIES = [
   {
