@@ -23,21 +23,28 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active"><a href="index.html">Inicio</a></li>
-                <li><a href="listings.html">Terrenos</a></li>
-                <li class="has-children">
-                  <a href="about.html">Acerca de</a>
+                <li class="active">
+                  <router-link to="/">
+                    Inicio  
+                  </router-link>
+                </li>
+                <li>
+                  <router-link to="/states">
+                    Terrenos
+                  </router-link>
+                </li>
+                <li class="has-children border-right pr-4">
+                  <a href="#">Acerca de</a>
                   <ul class="dropdown">
                     <li><a href="#">Nosotros</a></li>
                     <li><a href="#">Filosofia</a></li>
                   </ul>
                 </li>
-                <li><a href="blog.html">Blog</a></li>
-                <li class="mr-5"><a href="contact.html">Contact</a></li>
-
-                <li class="ml-xl-3 login"><a href="login.html"><span class="border-left pl-xl-4"></span>Iniciar Sesion</a></li>
-
-                <li><a href="register.html" class="cta"><span class="bg-primary text-white rounded">Registrar</span></a></li>
+                <li>
+                  <router-link to="/login" class="cta">
+                    <span class="bg-primary text-white rounded">Iniciar Sesion</span>
+                  </router-link>
+                </li>
               </ul>
             </nav>
           </div>
