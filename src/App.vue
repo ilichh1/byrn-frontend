@@ -1,29 +1,24 @@
 <template>
-  <main>
-    <HeaderComponent/>
-    <!--HomeComponent/-->
-    <LoginComponent/>
-    <FooterComponent/>
-  </main>
+  <div id="app">
+    <header-comp></header-comp>
+    <router-view/>
+    <footer-comp></footer-comp>
+  </div>
 </template>
 
 <script>
-import HeaderComponent from './components/HeaderComponent';
-import FooterComponent from './components/FooterComponent';
-
-import HomeComponent from './components/root-components/HomeComponent';
-import LoginComponent from './components/root-components/LoginComponent';
+import Header from '@/components/HeaderComponent';
+import Footer from '@/components/FooterComponent';
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    HeaderComponent,
-    FooterComponent,
-    HomeComponent,
-    LoginComponent
+    'header-comp': Header,
+    'footer-comp': Footer
   }
 }
 </script>
+
 
 <style>
 </style>
