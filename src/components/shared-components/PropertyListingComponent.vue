@@ -1,7 +1,7 @@
 <template>
   <div class="d-block d-md-flex listing vertical">
     <a
-      :style="`background-image:   url('${property.image}')`"
+      :style="`background-image: url('${property.image}')`"
       class="img d-block"></a>
     <div class="lh-content">
       <span class="category">{{ property.type }}</span>
