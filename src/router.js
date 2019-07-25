@@ -4,7 +4,7 @@ import Router from 'vue-router'
 // Views
 import Home from '@/views/HomeView.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -12,12 +12,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: Home
     },
     {
       path: '/login',
-      name: 'login',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -27,10 +25,29 @@ export default new Router({
     },
     {
       path: '/states',
-      name: 'states-listing',
       component: function () { 
         return import(/* webpackChunkName: "listing" */ '@/views/StatesListingView.vue')
       }
+    },
+    {
+      path: '/dashboard',
+      component: function () { 
+        return import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/DashboardHomeView.vue')
+      },
+      children: [
+        {
+          path: '',
+          redirect: 'profile'
+        },
+        {
+          path: 'profile',
+          component: () => import(/* webpackChunkName: "listing" */ '@/views/dashboard/children/ProfileFormView.vue')
+        },
+        {
+          path: 'estate',
+          component: () => import(/* webpackChunkName: "listing" */ '@/views/dashboard/children/UploadEstateFormView.vue')
+        }
+      ]
     }
   ]
 })
