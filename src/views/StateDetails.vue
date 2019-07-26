@@ -16,15 +16,21 @@
   <section class="container py-4" id="estate-detail">
     <div class="row">
       <div class="col-md-8">
-        <h2 class="text-white">Titulo de la propiedad</h2>
+        <h2 class="text-white ">Titulo de la propiedad</h2>
         <hr>
+        <div class="row">
+          <div class="col-12  block-13">
         <div class="owl-carousel nonloop-block-13">
+          
           <img
             v-for="(image, idx) in estateImages"
             :key="`imagen-${idx}`"
             :src="image.src" :alt="image.desc">
         </div>
-        <div class="border border-dark rounded mt-3 p-3 bg-white">
+          </div>
+        </div>
+       
+        <div class="border border-dark rounded mt-5 p-3 bg-white">
           <p class="h4 mb-2 text-black">Descripcion del terreno </p>
           <p class="mb-1 text-black">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -35,9 +41,10 @@
         </div>
       </div>
 
-      <div class="col-md-4">
-        <h2 class="text-white mb-1">Contacta al anunciante</h2>
-        <form class="p-3 bg-white">
+      <div class="col-md-4 p-3">
+        <h2 class="text-white ">Contacta al anunciante</h2>
+        
+        <form class="p-2 bg-white mt-3">
           <div class="row form-group">
             <div class="col-md-12">
               <label class="text-black" for="email">Correo</label>
@@ -62,6 +69,12 @@
             </div>
           </div>
         </form>
+           <h3 class="text-white mb-0 mt-4">Agenda tu cita </h3>
+         <date-picker class="col-md-12 mt-2"  v-model="datetime" lang="es" type="datetime" format="[El día: ]YYYY-MM-DD [a las: ]HH:mm a" width="500"
+        placeholder="Selecciona Fecha y Hora" confirm></date-picker>
+        <div class="d-flex justify-content-center">
+         <input type="submit" value="Agendar" class=" mt-3 btn btn-primary py-2 px-4 text-white">
+      </div>
       </div>
     </div>
   </section>
@@ -147,61 +160,78 @@
 
 <script>
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
+import DatePicker from 'vue2-datepicker'
+import { start } from 'repl';
 
 export default {
   name: 'states-listing-component',
   data () {
+    
     return {
       estateImages: [
         { src: 'images/img_1.jpg', desc: 'Fachada' },
         { src: 'images/img_3.jpg', desc: 'Cuarto No. 1' },
         { src: 'images/img_4.jpg', desc: 'Cochera' }
-      ]
+      ],
+      date:'',
+      time:'',
+      timePickerOptions:{
+        start: '00:00',
+        step: '00:30',
+        end:'23:30'
+      },
+      datetime:''
+      
     }
+ 
   },
   mounted() {
     console.log('Se monto este componente en el HTML');
     this.siteCarousel();
   },
   methods: {
+    
     siteCarousel() {
       if ( $('.nonloop-block-13').length > 0 ) {
         $('.nonloop-block-13').owlCarousel({
-          center: false,
+          center: true,
           items: 1,
           loop: true,
           stagePadding: 5,
           margin: 12,
           smartSpeed: 1000,
           autoplay: true,
-          autoplayTimeout: 1000,
+          autoplayTimeout: 3000,
           autoplayHoverPause: false,
-          // nav: true,
-          // navText: ['<span class="icon-keyboard_arrow_left">IZQUIERDA<span>', '<span class="icon-keyboard_arrow_right">DERECHA</span>'],
+          nav: true,
+          navText: ['<span class="icon-keyboard_arrow_left";><span>', '<span class="icon-keyboard_arrow_right"></span>'],
           responsive: {
             600: {
               margin: 30,
               nav: true,
-              items: 2
+              items: 1
             },
             1000: { 
               margin: 30,
               nav: true,
-              items: 3
+              items: 1
             },
             1200: {
               margin: 30,
               nav: true,
-              items: 4
+              items: 1
             }
           }
         });
       }
     }
+    
   },
   components: {
-    'state-component': PropertyListingComponent   
+    'state-component': PropertyListingComponent  ,
+    DatePicker
   }
+
 }
 </script>
 
