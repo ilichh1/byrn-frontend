@@ -7,53 +7,44 @@
           <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
             <div class="row justify-content-center mt-5">
               <div class="col-md-8 text-center">
-              
-                    <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-7 mb-5" data-aos="fade">
-         
-           
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-md-7 mb-5" data-aos="fade">
+                    </div>
+                  </div>
+                    <h2 class="mb-1 text-white">Iniciar Sesión</h2>
+                    <form action="#" class="p-3" style="background: rgba(255,255,255, 0.4)">
+                      <div class="row form-group">
+                        <div class="col-md-12">
+                          <label class="text-black" for="email">Correo</label>
+                          <input type="email" id="email" class="form-control">
+                        </div>
+                      </div>
+                        <div class="row form-group">
+                          <div class="col-md-12">
+                            <label class="text-black" for="subject">Contraseña</label>
+                            <input type="password" id="subject" class="form-control">
+                          </div>
+                        </div>
+                          <div class="row form-group">
+                            <div class="col-12 ">
+                            <p class="text-black">Aún no tienes cuenta? <router-link class="text-white" to="/register"> Regístrate</router-link></p>
+                           </div>
+                          </div>
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <input type="submit" value="Ingresar" class="btn btn-primary py-2 px-4 text-white">
+                              </div>
+                            </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-          </div>
-            <h2 class="mb-1 text-white">Iniciar Sesión</h2>
-            <form action="#" class="p-3 bg-white">
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="email">Correo</label>
-                  <input type="email" id="email" class="form-control">
-                </div>
-              </div>
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Contraseña</label>
-                  <input type="password" id="subject" class="form-control">
-                </div>
-              </div>
-              <div class="row form-group">
-                <div class="col-12 ">
-                  <p class="text-black">Aún no tienes cuenta? <a href="register.html">Regístrate</a></p>
-                </div>
-              </div>
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="Ingresar" class="btn btn-primary py-2 px-4 text-white">
-                </div>
-              </div>
-            </form>
-        </div>
-        
-      </div>
-      
-    </div>
-    
-   
-      
           </div>
         </div>
       </div>
-    </div>
-  </div>
 </template>
 
 <script>

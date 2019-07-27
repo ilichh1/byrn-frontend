@@ -38,6 +38,13 @@ export default new Router({
       component: function () { 
         return import(/* webpackChunkName: "details" */ '@/views/StateDetails.vue')
       }
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: function () { 
+        return import(/* webpackChunkName: "register" */ '@/views/RegisterView.vue')
+      }
     }
   ]
 })
