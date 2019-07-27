@@ -1,5 +1,5 @@
 <template>
-<div class="site-wrap bg-secondary">
+<div class="site-wrap bg-white">
   <div
     class="site-blocks-cover inner-page-cover overlay"
     style="background-image: url(images/summer-grass.jpg);"
@@ -13,10 +13,10 @@
       </div>
     </div>
   </div>
-  <section class="container py-4" id="estate-detail">
+  <section class="container py-4 bg-white" id="estate-detail">
     <div class="row">
       <div class="col-md-8">
-        <h2 class="text-white ">Titulo de la propiedad</h2>
+        <h2 class="text-black ">Titulo de la propiedad</h2>
         <hr>
         <div class="row">
           <div class="col-12  block-13">
@@ -30,7 +30,7 @@
           </div>
         </div>
        
-        <div class="border border-dark rounded mt-5 p-3 bg-white">
+        <div class=" mt-5 p-3 " style="background: rgba(0,0,0, .1);">
           <p class="h4 mb-2 text-black">Descripcion del terreno </p>
           <p class="mb-1 text-black">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -42,9 +42,9 @@
       </div>
 
       <div class="col-md-4 p-3">
-        <h2 class="text-white ">Contacta al anunciante</h2>
+        <h2 class="text-black ">Contacta al anunciante</h2>
         
-        <form class="p-2 bg-white mt-3">
+        <form class="p-2  mt-3" style="background: rgba(0,0,0, 0.1)" >
           <div class="row form-group">
             <div class="col-md-12">
               <label class="text-black" for="email">Correo</label>
@@ -69,7 +69,7 @@
             </div>
           </div>
         </form>
-           <h3 class="text-white mb-0 mt-4">Agenda tu cita </h3>
+           <h3 class="text-black mb-0 mt-4">Agenda tu cita </h3>
          <date-picker class="col-md-12 mt-2"  v-model="datetime" lang="es" type="datetime" format="[El día: ]YYYY-MM-DD [a las: ]HH:mm a" width="500"
         placeholder="Selecciona Fecha y Hora" confirm></date-picker>
         <div class="d-flex justify-content-center">
