@@ -45,6 +45,15 @@
                     <span class="bg-primary text-white rounded">Iniciar Sesion</span>
                   </router-link>
                 </li>
+                <li class="has-children pr-4">
+                  <a href="#">Usuario</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Editar Perfil</a></li>
+                    <li><a href="#">Mis Favoritos</a></li>
+                    <li><a href="#">Cerrar Sesion</a></li>
+                  </ul>
+
+                </li>
               </ul>
             </nav>
           </div>

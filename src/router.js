@@ -31,6 +31,20 @@ export default new Router({
       component: function () { 
         return import(/* webpackChunkName: "listing" */ '@/views/StatesListingView.vue')
       }
+    },
+    {
+      path: '/details',
+      name: 'state-details',
+      component: function () { 
+        return import(/* webpackChunkName: "details" */ '@/views/StateDetails.vue')
+      }
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: function () { 
+        return import(/* webpackChunkName: "register" */ '@/views/RegisterView.vue')
+      }
     }
   ]
 })
