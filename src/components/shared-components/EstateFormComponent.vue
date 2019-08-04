@@ -121,7 +121,6 @@ label[for="addImageInput"]:focus {
 }
 </style>
 
-
 <script>
 const OWNERS = [
   {
@@ -144,10 +143,10 @@ const OWNERS = [
     first_name: 'Sebastian',
     last_name: 'González'
   }
-];
+]
 export default {
   name: 'estate-form',
-  data() {
+  data () {
     return {
       owners: OWNERS,
       estate: {
@@ -163,17 +162,17 @@ export default {
     }
   },
   methods: {
-    onMapCenterChanged(event) {
-      estate.latitude = event.lat();
-      estate.longitude = event.lng();
+    onMapCenterChanged (event) {
+      estate.latitude = event.lat()
+      estate.longitude = event.lng()
     },
-    onEnterKeyToAddImage() {
-      this.$refs.addFileButton.click();
+    onEnterKeyToAddImage () {
+      this.$refs.addFileButton.click()
     },
-    onEstateImageAdded({ target }) {
-      const file = target.files[0];
-      this.estate.files.push(file);
-      target.value = null;
+    onEstateImageAdded ({ target }) {
+      const file = target.files[0]
+      this.estate.files.push(file)
+      target.value = null
     }
   }
 }

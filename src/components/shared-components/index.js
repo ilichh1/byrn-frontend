@@ -1,5 +1,5 @@
-import EstateFormComponent from './EstateFormComponent.vue';
+import EstateFormComponent from './EstateFormComponent.vue'
 
 export {
   EstateFormComponent
-};
+}

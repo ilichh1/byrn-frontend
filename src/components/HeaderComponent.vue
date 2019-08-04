@@ -25,7 +25,7 @@
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active">
                   <router-link to="/">
-                    Inicio  
+                    Inicio
                   </router-link>
                 </li>
                 <li>
@@ -44,6 +44,15 @@
                   <router-link to="/login" class="cta">
                     <span class="bg-primary text-white rounded">Iniciar Sesion</span>
                   </router-link>
+                </li>
+                <li class="has-children pr-4">
+                  <a href="#">Usuario</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Editar Perfil</a></li>
+                    <li><a href="#">Mis Favoritos</a></li>
+                    <li><a href="#">Cerrar Sesion</a></li>
+                  </ul>
+
                 </li>
               </ul>
             </nav>

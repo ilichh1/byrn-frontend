@@ -1,6 +1,6 @@
 <template>
   <div class="site-wrap">
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/hero_2.jpg);"
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/summer-grass.jpg);"
       data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
@@ -317,7 +317,7 @@
         </div>
       </div>
     </div>
-    
+
     <div class="site-section bg-white">
       <div class="container">
         <div class="row justify-content-center mb-5">
