@@ -25,7 +25,7 @@
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active">
                   <router-link to="/">
-                    Inicio  
+                    Inicio
                   </router-link>
                 </li>
                 <li>

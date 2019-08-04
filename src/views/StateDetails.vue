@@ -21,7 +21,7 @@
         <div class="row">
           <div class="col-12  block-13">
         <div class="owl-carousel nonloop-block-13">
-          
+
           <img
             v-for="(image, idx) in estateImages"
             :key="`imagen-${idx}`"
@@ -29,7 +29,7 @@
         </div>
           </div>
         </div>
-       
+
         <div class=" mt-5 p-3 " style="background: rgba(0,0,0, .1);">
           <p class="h4 mb-2 text-black">Descripcion del terreno </p>
           <p class="mb-1 text-black">
@@ -43,7 +43,7 @@
 
       <div class="col-md-4 p-3">
         <h2 class="text-black ">Contacta al anunciante</h2>
-        
+
         <form class="p-2  mt-3" style="background: rgba(0,0,0, 0.1)" >
           <div class="row form-group">
             <div class="col-md-12">
@@ -159,40 +159,38 @@
 </template>
 
 <script>
-import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
+// import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 import DatePicker from 'vue2-datepicker'
-import { start } from 'repl';
+// import { start } from 'repl';
 
 export default {
   name: 'states-listing-component',
   data () {
-    
     return {
       estateImages: [
         { src: 'images/img_1.jpg', desc: 'Fachada' },
         { src: 'images/img_3.jpg', desc: 'Cuarto No. 1' },
         { src: 'images/img_4.jpg', desc: 'Cochera' }
       ],
-      date:'',
-      time:'',
-      timePickerOptions:{
+      date: '',
+      time: '',
+      timePickerOptions: {
         start: '00:00',
         step: '00:30',
-        end:'23:30'
+        end: '23:30'
       },
-      datetime:''
-      
+      datetime: ''
+
     }
- 
   },
-  mounted() {
-    console.log('Se monto este componente en el HTML');
-    this.siteCarousel();
+  mounted () {
+    console.log('Se monto este componente en el HTML')
+    this.siteCarousel()
   },
   methods: {
-    
-    siteCarousel() {
-      if ( $('.nonloop-block-13').length > 0 ) {
+
+    siteCarousel () {
+      if ($('.nonloop-block-13').length > 0) {
         $('.nonloop-block-13').owlCarousel({
           center: true,
           items: 1,
@@ -211,7 +209,7 @@ export default {
               nav: true,
               items: 1
             },
-            1000: { 
+            1000: {
               margin: 30,
               nav: true,
               items: 1
@@ -222,13 +220,12 @@ export default {
               items: 1
             }
           }
-        });
+        })
       }
     }
-    
+
   },
   components: {
-    'state-component': PropertyListingComponent  ,
     DatePicker
   }
 

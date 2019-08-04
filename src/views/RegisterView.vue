@@ -18,7 +18,7 @@
       <div class="col-md-8">
         <div class=" mt-3 p-3 " >
           <p class="h4 mb-2 text-black"> </p>
-          <p class="mb-1 text-black" style="font-size : 20px">Con tu cuenta personal de BYRN tendrás acceso a: 
+          <p class="mb-1 text-black" style="font-size : 20px">Con tu cuenta personal de BYRN tendrás acceso a:
             <br>
             <img class="mt-4 " src="/images/heart.png" width="80px">
             <label class="px-3">Guardar tus propiedades favoritas</label>
@@ -29,12 +29,12 @@
             <img class="mt-3 " src="/images/edit.png" width="80px">
              <label class="px-3">Editar perfil</label>
 
-          </p> 
+          </p>
         </div>
       </div>
 
       <div class="col-md-4 p-3">
-        
+
         <form action="#" class="p-3" style="background: rgba(0,0,0, 0.2)">
                          <div class="row form-group">
                         <div class="col-md-12">
@@ -72,37 +72,19 @@
                               </div>
                             </div>
                       </form>
-        
+
       </div>
     </div>
   </section>
 </div>
-                    
-
-
-
-
-
-
-
-
 
                     <!---->
-                   
+
 </template>
-
-
-
-
-
-
-
-
-
 
 <script>
 export default {
-    
+
 }
 </script>
 <style>

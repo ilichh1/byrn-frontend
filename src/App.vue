@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Header from '@/components/HeaderComponent';
-import Footer from '@/components/FooterComponent';
+import Header from '@/components/HeaderComponent'
+import Footer from '@/components/FooterComponent'
 
 export default {
   name: 'App',
@@ -18,7 +18,6 @@ export default {
   }
 }
 </script>
-
 
 <style>
 </style>
