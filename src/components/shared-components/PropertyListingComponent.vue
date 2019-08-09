@@ -1,25 +1,31 @@
 <template>
   <div class="d-block d-md-flex listing vertical">
     <a
-      :style="`background-image: url('${property.image}')`"
+      :style="`background-image: url('${estate.image}')`"
       class="img d-block"></a>
     <div class="lh-content">
-      <span class="category">{{ property.type }}</span>
+      <span class="category">{{ estate.type }}</span>
       <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-      <h3><router-link to="/details">{{ property.name }}</router-link></h3>
-      <address>{{ property.address }}</address>
+      <h3><router-link :to="`/details/${estate.id}`">{{ estate.name }}</router-link></h3>
+      <address>{{ estate.address }}</address>
       <p class="mb-0">
-        <span class="review">{{ property.visit_count }} visitas</span>
+        <span class="review">{{ estate.visit_count }} visitas</span>
       </p>
     </div>
   </div>
 </template>
 
 <script>
+
+
 export default {
   name: 'property-listing-component',
+  mounted () {
+    console.log(Object.keys(this.estate))
+  },
   props: {
-    property: {
+    estate: {
+      type: Object,
       default () {
         return {
           id: 26,
@@ -33,5 +39,6 @@ export default {
       }
     }
   }
+ 
 }
 </script>

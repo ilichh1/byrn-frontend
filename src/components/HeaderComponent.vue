@@ -15,9 +15,11 @@
         <div class="row align-items-center">
 
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo">
-              <img src="images/BYRN-LOGO.png" width="auto" height="64">
-            </h1>
+            <router-link to="/">
+              <h1 class="mb-0 site-logo">
+                <img src="images/BYRN-LOGO.png" width="auto" height="64">
+              </h1>
+            </router-link>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -48,7 +50,9 @@
                 <li class="has-children pr-4">
                   <a href="#">Usuario</a>
                   <ul class="dropdown">
-                    <li><a href="#">Editar Perfil</a></li>
+                    <li><router-link to="/editp"><a href="#">Editar Perfil</a>
+                    
+                  </router-link></li>
                     <li><a href="#">Mis Favoritos</a></li>
                     <li><a href="#">Cerrar Sesion</a></li>
                   </ul>
