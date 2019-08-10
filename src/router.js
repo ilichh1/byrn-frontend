@@ -46,11 +46,12 @@ export default new Router({
         {
           path: 'estate',
           component: () => import(/* webpackChunkName: "listing" */ '@/views/dashboard/children/UploadEstateFormView.vue')
-        }
+        },
+        
       ]
     },
     {
-      path: '/details',
+      path: '/details/:id',
       name: 'state-details',
       component: function () {
         return import(/* webpackChunkName: "details" */ '@/views/StateDetails.vue')
@@ -61,6 +62,13 @@ export default new Router({
       name: 'register',
       component: function () {
         return import(/* webpackChunkName: "register" */ '@/views/RegisterView.vue')
+      }
+    },
+    {
+      path: '/editp',
+      name: 'edit-profile',
+      component: function () {
+        return import(/* webpackChunkName: "editar-perfil" */ '@/views/EditProfileView.vue')
       }
     }
   ]

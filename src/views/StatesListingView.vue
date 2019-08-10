@@ -22,10 +22,11 @@
           <div class="col-lg-8">
             <div class="row">
               <div
-                v-for="(element, index) in [0,1,2,3,4,5,6,7,8,9]"
-                :key="`${element}-${index}`"
+                v-for="(element, index) in estates"
+                :key="`${element.name}-${index}`"
                 class="col-lg-6">
-                <state-component></state-component>
+                <state-component
+                :estate="element"></state-component>
               </div>
               <!--
               <div class="col-lg-6">
@@ -402,9 +403,34 @@
 
 <script>
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
+import endpoints from "../endpoints";
+const { VUE_APP_BASE_URL: BASE_URL } = process.env;
 
 export default {
   name: 'states-listing-component',
+  data(){
+    return {
+      estates: []
+    } 
+  },
+   mounted(){
+    const { estates } = endpoints;
+    this.$http.get(`${BASE_URL}/${estates}`)
+        .then(res => {
+          this.estates = res.data.data.map(estate => {
+            return {
+              id: estate.id,
+              type: estate.type == 1 ? 'Casa' : 'Terreno',
+              image: 'images/img_1.jpg',
+              name: estate.name,
+              address: estate.address,
+              is_favorite: false,
+              visit_count: 23,
+            }
+          });
+        });
+
+  },
   components: {
     'state-component': PropertyListingComponent
   }
