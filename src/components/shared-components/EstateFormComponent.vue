@@ -163,8 +163,8 @@ export default {
   },
   methods: {
     onMapCenterChanged (event) {
-      estate.latitude = event.lat()
-      estate.longitude = event.lng()
+      this.estate.latitude = event.lat()
+      this.estate.longitude = event.lng()
     },
     onEnterKeyToAddImage () {
       this.$refs.addFileButton.click()

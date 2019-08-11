@@ -95,24 +95,24 @@ export default {
     // console.log(process.env)
   },
   methods: {
-    onFormSubmit() {
+    onFormSubmit () {
       const { createUser } = this.endpoints
       const postBody = {
         ...this.form,
-        "street": "Guayabitos",
-        "outside_number": "184",
-        "neighborhood": "Colonia",
-        };
-        const options = {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          data: postBody,
-          url: `${BASE_URL}/${createUser}`
-        };
+        'street': 'Guayabitos',
+        'outside_number': '184',
+        'neighborhood': 'Colonia'
+      }
+      const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        data: postBody,
+        url: `${BASE_URL}/${createUser}`
+      }
       this.$http(options)
         .then(res => {
-          console.log('RESPUESTA DE LA API: ', res);
-        });
+          console.log('RESPUESTA DE LA API: ', res)
+        })
     }
   }
 }

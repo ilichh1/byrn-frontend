@@ -5,6 +5,9 @@ import VueAxios from 'vue-axios'
 import router from './router'
 // Google Maps
 import * as VueGoogleMaps from 'vue2-google-maps'
+// Promise pollyfill
+import 'es6-promise/auto'
+import { store } from './store'
 
 Vue.use(VueAxios, axios)
 Vue.use(VueGoogleMaps, {
@@ -23,5 +26,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: function (h) { return h(App) }
 }).$mount('#app')

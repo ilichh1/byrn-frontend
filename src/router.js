@@ -46,8 +46,8 @@ export default new Router({
         {
           path: 'estate',
           component: () => import(/* webpackChunkName: "listing" */ '@/views/dashboard/children/UploadEstateFormView.vue')
-        },
-        
+        }
+
       ]
     },
     {

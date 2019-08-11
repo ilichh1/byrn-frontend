@@ -58,34 +58,29 @@
 </template>
 
 <script>
-import endpoints from "../endpoints";
-const { VUE_APP_BASE_URL: BASE_URL } = process.env;
-/*
-{
-	"email": "juan@example.com",
-	"password": "secret"
-}
-*/
+import endpoints from '../endpoints'
+const { VUE_APP_BASE_URL: BASE_URL } = process.env
+
 export default {
-  name: "login-component",
+  name: 'login-component',
   data: () => ({
     endpoints,
-    form:{
+    form: {
       email: '',
-      password: '',
+      password: ''
     }
   }),
   methods: {
-    onLogin() {
-      const { login } = this.endpoints;
+    onLogin () {
+      const { login } = this.endpoints
       const body = {
-     ...this.form
-      };
+        ...this.form
+      }
       this.$http.post(`${BASE_URL}/${login}`, body)
         .then(res => {
-          console.log(res);
-        });
+          console.log(res)
+        })
     }
   }
-};
+}
 </script>

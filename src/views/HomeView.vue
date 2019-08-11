@@ -449,6 +449,9 @@ export default {
       featuredProperties: FEATURED_PROPERTIES
     }
   },
+  methods: {
+
+  },
   components: {
     PropertyListingComponent
   }

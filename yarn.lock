@@ -2412,6 +2412,11 @@ es-to-primitive@^1.2.0:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+es6-promise@^4.2.8:
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
+  integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
+
 escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
@@ -7618,6 +7623,11 @@ vue-loader@^15.7.0:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-range-slider@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/vue-range-slider/-/vue-range-slider-0.6.0.tgz#a2c1927a5a38e72a96146478b421752817df34ff"
+  integrity sha512-VH5ZI7ZxZ/2I+4kmHMvRNShB87N+N71wgENFaycMI2NEBCxKyF+gN/NbbralGQP63X9IrCWgggo8uBjm7SdM7g==
 
 vue-router@^3.0.3:
   version "3.1.2"

@@ -17,7 +17,7 @@
           <div class="col-6 col-xl-2">
             <router-link to="/">
               <h1 class="mb-0 site-logo">
-                <img src="images/BYRN-LOGO.png" width="auto" height="64">
+                <img src="/images/BYRN-LOGO.png" width="auto" height="64">
               </h1>
             </router-link>
           </div>
@@ -51,7 +51,7 @@
                   <a href="#">Usuario</a>
                   <ul class="dropdown">
                     <li><router-link to="/editp"><a href="#">Editar Perfil</a>
-                    
+
                   </router-link></li>
                     <li><a href="#">Mis Favoritos</a></li>
                     <li><a href="#">Cerrar Sesion</a></li>
