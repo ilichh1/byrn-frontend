@@ -78,9 +78,9 @@
 <script>
 import endpoints from '../endpoints'
 import { toQueryParam } from '@/utils'
-const { VUE_APP_BASE_URL: BASE_URL } = process.env
 import FiltersComponent from '@/components/shared-components/FiltersComponent'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
+const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
 export default {
   name: 'states-listing-component',
@@ -98,48 +98,48 @@ export default {
       }
     }
   },
-  created() {
+  created () {
     const { estates } = endpoints
     this.url = `${BASE_URL}/${estates}`
   },
   methods: {
-    moveTo(page) {
+    moveTo (page) {
       this.filters = {
         ...this.filters,
         page
       }
       this.fetchEstates()
     },
-    onFiltersChanged(filters) {
+    onFiltersChanged (filters) {
       this.filters = {
         ...this.filters,
         ...filters
       }
       this.fetchEstates()
     },
-    fetchEstates() {
-      const { current_url } = this
-      this.$http.get(current_url)
-      .then(({ data: response }) => {
-        const { next_page_url: next, prev_page_url: prev, current_page } = response
-        this.pagination = { next, prev }
-        this.current_page = current_page
-        this.estates = response.data.map(estate => {
-          return {
-            id: estate.id,
-            type: estate.type === 1 ? 'Casa' : 'Terreno',
-            image: 'images/img_1.jpg',
-            name: estate.name,
-            address: estate.address,
-            is_favorite: false,
-            visit_count: 23
-          }
+    fetchEstates () {
+      const { currentUrl } = this
+      this.$http.get(currentUrl)
+        .then(({ data: response }) => {
+          const { next_page_url: next, prev_page_url: prev, currentPage } = response
+          this.pagination = { next, prev }
+          this.currentPage = currentPage
+          this.estates = response.data.map(estate => {
+            return {
+              id: estate.id,
+              type: estate.type === 1 ? 'Casa' : 'Terreno',
+              image: 'images/img_1.jpg',
+              name: estate.name,
+              address: estate.address,
+              is_favorite: false,
+              visit_count: 23
+            }
+          })
         })
-      })
     }
   },
   computed: {
-    current_url () {
+    currentUrl () {
       const { url, filters } = this
       const queryParam = toQueryParam(filters)
       return `${url}?${queryParam}`

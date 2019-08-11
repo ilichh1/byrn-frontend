@@ -104,13 +104,13 @@
 </template>
 
 <script>
-import RangeSlider from "vue-range-slider";
-import "vue-range-slider/dist/vue-range-slider.css";
+import RangeSlider from 'vue-range-slider'
+import 'vue-range-slider/dist/vue-range-slider.css'
 import _ from 'lodash'
 
 export default {
-  name: "FilterComponent",
-  data() {
+  name: 'FilterComponent',
+  data () {
     return {
       meter_price_more_than: 100,
       meter_price_less_than: 2000,
@@ -118,12 +118,12 @@ export default {
       surface_area_less_than: 10000,
       estate_type: 1,
       sell_or_rent: 0,
-      orderBy_order: "ASC",
-      orderBy_attribute: "created_at",
+      orderBy_order: 'ASC',
+      orderBy_attribute: 'created_at',
       itemsByPage: 10
-    };
+    }
   },
-  mounted() {
+  mounted () {
     this.$emit('filtersChanged', this.filters)
   },
   methods: {
@@ -132,7 +132,7 @@ export default {
     }, 1000)
   },
   computed: {
-    filters() {
+    filters () {
       const {
         meter_price_more_than,
         meter_price_less_than,
@@ -143,7 +143,7 @@ export default {
         orderBy_attribute,
         orderBy_order,
         itemsByPage
-      } = this;
+      } = this
       return {
         meter_price_more_than,
         meter_price_less_than,
@@ -154,22 +154,22 @@ export default {
         orderBy_attribute,
         orderBy_order,
         itemsByPage
-      };
+      }
     }
   },
   watch: {
-    meter_price_more_than: function() { this.onFilterChanged(this) },
-    meter_price_less_than: function() { this.onFilterChanged(this) },
-    surface_area_more_than: function() { this.onFilterChanged(this) },
-    surface_area_less_than: function() { this.onFilterChanged(this) },
-    estate_type: function() { this.onFilterChanged(this) },
-    sell_or_rent: function() { this.onFilterChanged(this) },
-    orderBy_order: function() { this.onFilterChanged(this) },
-    orderBy_attribute: function() { this.onFilterChanged(this) },
-    itemsByPage: function() { this.onFilterChanged(this) }
+    meter_price_more_than: function () { this.onFilterChanged(this) },
+    meter_price_less_than: function () { this.onFilterChanged(this) },
+    surface_area_more_than: function () { this.onFilterChanged(this) },
+    surface_area_less_than: function () { this.onFilterChanged(this) },
+    estate_type: function () { this.onFilterChanged(this) },
+    sell_or_rent: function () { this.onFilterChanged(this) },
+    orderBy_order: function () { this.onFilterChanged(this) },
+    orderBy_attribute: function () { this.onFilterChanged(this) },
+    itemsByPage: function () { this.onFilterChanged(this) }
   },
   components: {
     RangeSlider
   }
-};
+}
 </script>
