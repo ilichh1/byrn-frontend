@@ -3,14 +3,12 @@ import App from './App.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import router from './router'
-import Vuex from 'vuex'
 // Google Maps
 import * as VueGoogleMaps from 'vue2-google-maps'
 // Promise pollyfill
 import 'es6-promise/auto'
 import { store } from './store'
 
-Vue.use(Vuex)
 Vue.use(VueAxios, axios)
 Vue.use(VueGoogleMaps, {
   load: {
