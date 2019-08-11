@@ -1,5 +1,5 @@
 <template>
-  <div ref="carousel" class="owl-carousel owl-theme d-flex">
+  <div ref="carousel" class="byrn-image-carousel owl-carousel owl-theme mb-3">
     <img v-for="(image, idx) of images"
     class="item owl-lazy"
     :key="idx"
@@ -9,10 +9,21 @@
   </div>
 </template>
 
-<style scoped>
-img.item {
-  height: 270px;
-  width: auto;
+<style lang="scss">
+.byrn-image-carousel {
+  img.item {
+    max-height: 300px;
+    width: auto;
+    margin: auto;
+  }
+  .owl-nav {
+    margin: 0.7rem;
+    .owl-prev,
+    .owl-next {
+      font-size: 18px;
+      padding: 8px 12px;
+    }
+  }
 }
 </style>
 
@@ -33,23 +44,11 @@ export default {
         loop: true,
         margin: 10,
         responsiveClass: true,
-        autoWidth: true,
         lazyLoad:true,
-        responsive: {
-          0: {
-            items: 1,
-            nav: true
-          },
-          600: {
-            items: 3,
-            nav: false
-          },
-          1000: {
-            items: 5,
-            nav: true,
-            loop: false
-          }
-        }
+        nav:true,
+        dots: false,
+        navText : ["<<",">>"],
+        items: 1
       })
     }
   },
