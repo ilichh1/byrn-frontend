@@ -23,8 +23,7 @@
             <div class="col-12 block-13">
               <div class="owl-carousel nonloop-block-13">
                 <img src="images/img_1.jpg"
-                
-                 
+
                 />
               </div>
             </div>
@@ -50,9 +49,7 @@
               <br>
               Domicilio: {{ estate.address }}
               <br>
-              
-            
-              
+
               </p>
           </div>
         </div>
@@ -98,7 +95,7 @@
             placeholder="Selecciona Fecha y Hora"
             confirm
           ></date-picker>
-          
+
           <div class="d-flex justify-content-center">
             <input type="submit" value="Agendar" class="mt-3 btn btn-primary py-2 px-4 text-white" />
           </div>
@@ -187,71 +184,68 @@
 
 <script>
 // import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
-import DatePicker from "vue2-datepicker";
-import endpoints from "../endpoints";
-const { VUE_APP_BASE_URL: BASE_URL } = process.env;
+import DatePicker from 'vue2-datepicker'
+import endpoints from '../endpoints'
+const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
 export default {
-  name: "states-listing-component",
-  data() {
+  name: 'states-listing-component',
+  data () {
     return {
-      estate:{},
-      appointment:{
-            date:"",
-            time:"",
+      estate: {},
+      appointment: {
+        date: '',
+        time: ''
       },
-      form:{
-            email:"",
-            phone:"",
-            message:""
+      form: {
+        email: '',
+        phone: '',
+        message: ''
       },
-      date: "",
-      time: "",
+      date: '',
+      time: '',
       timePickerOptions: {
-        start: "07:00",
-        step: "01:00",
-        end: "21:00"
+        start: '07:00',
+        step: '01:00',
+        end: '21:00'
       },
-      datetime: ""
-    };
+      datetime: ''
+    }
   },
-  mounted() {
-    
-    const { id } = this.$route.params;
-    const { estates } = endpoints;
+  mounted () {
+    const { id } = this.$route.params
+    const { estates } = endpoints
     this.$http.get(`${BASE_URL}/${estates}/${id}`)
-        .then(res => {
+      .then(res => {
         this.estate = res.data
-            return {
-              id: this.estate.id,
-              name: this.estate.name,
-              description: this.estate.description,
-              image: 'images/img_1.jpg',
-              seller_price: this.estate.seller_price,
-              surface_area: this.estate.surface_area,
-              meter_price: this.estate.meter_price,
-              latitude: this.estate.latitude,
-              longitude: this.estate.longitude,
-              address: this.estate.address,
-            }
-       
-        });
-        
-    this.siteCarousel();
+        return {
+          id: this.estate.id,
+          name: this.estate.name,
+          description: this.estate.description,
+          image: 'images/img_1.jpg',
+          seller_price: this.estate.seller_price,
+          surface_area: this.estate.surface_area,
+          meter_price: this.estate.meter_price,
+          latitude: this.estate.latitude,
+          longitude: this.estate.longitude,
+          address: this.estate.address
+        }
+      })
+
+    this.siteCarousel()
   },
   methods: {
     onDateTimeChange () {
-      if(this.appointment.time <= 13){
-        this.appointment.time = this.datetime.getHours()+" pm";
-     }else{
-       this.appointment.time = this.datetime.getHours()+" am";
-     }
-      this.appointment.date=this.datetime.getFullYear()+"-"+this.datetime.getMonth()+"-"+this.datetime.getDate();
-      
+      if (this.appointment.time <= 13) {
+        this.appointment.time = this.datetime.getHours() + ' pm'
+      } else {
+        this.appointment.time = this.datetime.getHours() + ' am'
+      }
+      this.appointment.date = this.datetime.getFullYear() + '-' + this.datetime.getMonth() + '-' + this.datetime.getDate()
     },
-    siteCarousel() {
-      if ($(".nonloop-block-13").length > 0) {
-        $(".nonloop-block-13").owlCarousel({
+    siteCarousel () {
+      if ($('.nonloop-block-13').length > 0) {
+        $('.nonloop-block-13').owlCarousel({
           center: true,
           items: 1,
           loop: true,
@@ -283,15 +277,15 @@ export default {
               items: 1
             }
           }
-        });
+        })
       }
     }
   },
   components: {
     DatePicker
   }
-};
- //console.log(datetime);
+}
+// console.log(datetime);
 </script>
 
 <style>

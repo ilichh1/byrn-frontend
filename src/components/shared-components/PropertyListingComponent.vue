@@ -17,7 +17,6 @@
 
 <script>
 
-
 export default {
   name: 'property-listing-component',
   mounted () {
@@ -39,6 +38,6 @@ export default {
       }
     }
   }
- 
+
 }
 </script>

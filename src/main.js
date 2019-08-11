@@ -8,7 +8,7 @@ import Vuex from 'vuex'
 import * as VueGoogleMaps from 'vue2-google-maps'
 // Promise pollyfill
 import 'es6-promise/auto'
-import { store } from './store';
+import { store } from './store'
 
 Vue.use(Vuex)
 Vue.use(VueAxios, axios)

@@ -51,7 +51,7 @@
                   <a href="#">Usuario</a>
                   <ul class="dropdown">
                     <li><router-link to="/editp"><a href="#">Editar Perfil</a>
-                    
+
                   </router-link></li>
                     <li><a href="#">Mis Favoritos</a></li>
                     <li><a href="#">Cerrar Sesion</a></li>

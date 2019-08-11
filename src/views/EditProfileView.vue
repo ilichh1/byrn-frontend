@@ -50,7 +50,7 @@
       <label for="neighborhood">Colonia</label>
       <input type="text" class="form-control" id="neighborhood" placeholder="Colonia" >
     </div>
-  
+
        <div class="form-group col-md-6">
       <label for="cellphone">Teléfono</label>
       <input type="text" class="form-control" id="cellphone" placeholder="Teléfono" >
@@ -62,7 +62,7 @@
         <option>Vender</option>
       </select>
     </div>
-  
+
   </div>
   <div class="d-flex justify-content-center">
   <button type="submit " class="btn btn-primary justify-content-center">Editar</button>
@@ -77,10 +77,9 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
 <style>
 
 </style>
-            
