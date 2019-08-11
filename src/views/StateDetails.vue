@@ -21,11 +21,7 @@
           <hr>
           <div class="row">
             <div class="col-12 block-13">
-              <div class="owl-carousel nonloop-block-13">
-                <img src="images/img_1.jpg"
-
-                />
-              </div>
+              <ByrnImageCarousel :images="estateImages"/>
             </div>
           </div>
 
@@ -103,96 +99,22 @@
       </div>
     </section>
   </div>
-  <!--div class="site-wrap">
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/summer-grass.jpg);"
-      data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-left text-left">
-          <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
-            <div class="row justify-content-left mt-5">
-              <div class="col-md-8 text-left">
-                <h1>Titulo de Terreno</h1>
-                <hr style="background:white">
-                <form action="#" class="p-5 bg-white">
-                  <div class="col-md-12">
-                    <label class=" mb-5 text-black">CARRUSEL</label>
-                  </div>
-                </form>
-                <br>
-                <form action="#" class="p-1 bg-white" style="border-radius:20px">
-                  <div class="col-md-12">
-                    <p class=" mb-5 text-black">Descripcion del terreno </p>
-                    <label class=" mb-1 text-black"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Consectetur unde reprehenderit
-                      aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt
-                      consequatur. Amet dolores excepturi earum unde iusto</label>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row align-items-left justify-content-left text-left">
-          <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
-            <div class="row justify-content-center mt-5">
-              <div class="col-md-8 text-center">
-                <div class="container">
-                  <div class="row justify-content-center">
-                    <div class="col-md-7 mb-5" data-aos="fade">
-                    </div>
-                  </div>
-                  <h2 class="mb-1 text-white">Contactar Anunciante</h2>
-                  <form action="#" class="p-3 bg-white">
-                    <div class="row form-group">
-                      <div class="col-md-12">
-                        <label class="text-black" for="email">Correo</label>
-                        <input type="email" id="email" class="form-control">
-                      </div>
-                    </div>
-                    <div class="row form-group">
-                      <div class="col-md-12">
-                        <label class="text-black" for="phone">Teléfono</label>
-                        <input type="text" id="phone" class="form-control">
-                      </div>
-                    </div>
-                    <div class="row form-group">
-                      <div class="col-md-12 ">
-                        <label class="text-black" for="message"> Mensaje </label>
-                        <input type="text" id="message" class="form-control" style="height :200px">
-                      </div>
-                    </div>
-                    <div class="row form-group">
-                      <div class="col-md-12">
-                        <input type="submit" value="Enviar" class="btn btn-primary py-2 px-4 text-white">
-                      </div>
-                    </div>
-                  </form>
-                  <router-link to="/"><img src="/images/calendar.png" width="50px" height="50px" />
-                    <h2 class="text-black"> Agenda tu cita </h2>
-                  </router-link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div-->
 </template>
 
 <script>
 // import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 import DatePicker from 'vue2-datepicker'
 import endpoints from '../endpoints'
+import ByrnImageCarousel from '@/components/shared-components/ImageCarousel.vue';
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
 export default {
   name: 'states-listing-component',
   data () {
     return {
-      estate: {},
+      estate: {
+        images: []
+      },
       appointment: {
         date: '',
         time: ''
@@ -216,13 +138,14 @@ export default {
     const { id } = this.$route.params
     const { estates } = endpoints
     this.$http.get(`${BASE_URL}/${estates}/${id}`)
-      .then(res => {
-        this.estate = res.data
+      .then(({ data: estate }) => {
+        this.estate = estate
+        /*
         return {
           id: this.estate.id,
           name: this.estate.name,
           description: this.estate.description,
-          image: 'images/img_1.jpg',
+          images: this.estate.images.map(o => o.url),
           seller_price: this.estate.seller_price,
           surface_area: this.estate.surface_area,
           meter_price: this.estate.meter_price,
@@ -231,9 +154,8 @@ export default {
           address: this.estate.address,
           first_page_url: this.estate.first_page_url
         }
+        */
       })
-
-    this.siteCarousel()
   },
   methods: {
     onDateTimeChange () {
@@ -282,8 +204,18 @@ export default {
       }
     }
   },
+  computed: {
+    estateImages() {
+      try {
+        return this.estate.images.map(o => o.url)
+      } catch (e) {
+        return ['/images/img_1.jpg']
+      }
+    }
+  },
   components: {
-    DatePicker
+    DatePicker,
+    ByrnImageCarousel
   }
 }
 // console.log(datetime);
