@@ -17,7 +17,7 @@
           <div class="col-6 col-xl-2">
             <router-link to="/">
               <h1 class="mb-0 site-logo">
-                <img src="images/BYRN-LOGO.png" width="auto" height="64">
+                <img src="/images/BYRN-LOGO.png" width="auto" height="64">
               </h1>
             </router-link>
           </div>

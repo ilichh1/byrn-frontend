@@ -2,7 +2,7 @@
   <div class="site-wrap bg-white">
     <div
       class="site-blocks-cover inner-page-cover overlay"
-      style="background-image: url(images/summer-grass.jpg);"
+      style="background-image: url(/images/summer-grass.jpg);"
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
