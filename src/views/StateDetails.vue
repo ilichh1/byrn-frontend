@@ -233,11 +233,14 @@ export default {
               latitude: this.estate.latitude,
               longitude: this.estate.longitude,
               address: this.estate.address,
+              first_page_url: this.estate.first_page_url
             }
        
         });
         
     this.siteCarousel();
+    console.log(first_page_url);
+    debugger;
   },
   methods: {
     onDateTimeChange () {

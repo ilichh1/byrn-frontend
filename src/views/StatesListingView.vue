@@ -4,22 +4,33 @@
       data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
-          <div class="col-md-10" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-md-10 mt-5" data-aos="fade-up" data-aos-delay="400">
             <div class="row justify-content-center mt-5">
-              <div class="col-md-8 text-center">
+              <div class="col-md-8 text-center ">
                 <h1>Propiedades disponibles</h1>
                 <p class="mb-0">Elige la propiedad que complete tu vida.</p>
+                
               </div>
+              
             </div>
+            
           </div>
+          <div class="col-md-12">
+              <FiltersComponent></FiltersComponent>
+              
+
+          </div>
+
         </div>
+        
       </div>
+      
     </div>
 
     <div class="site-section">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="row">
               <div
                 v-for="(element, index) in estates"
@@ -232,89 +243,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 pl-5">
-
-            <div class="mb-5">
-              <h3 class="h5 text-black mb-3">Filters</h3>
-              <form action="#" method="post">
-                <div class="form-group">
-                  <input type="text" placeholder="What are you looking for?" class="form-control">
-                </div>
-                <div class="form-group">
-                  <div class="select-wrap">
-                    <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                    <select class="form-control" name="" id="">
-                      <option value="">All Categories</option>
-                      <option value="" selected="">Real Estate</option>
-                      <option value="">Books &amp; Magazines</option>
-                      <option value="">Furniture</option>
-                      <option value="">Electronics</option>
-                      <option value="">Cars &amp; Vehicles</option>
-                      <option value="">Others</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <!-- select-wrap, .wrap-icon -->
-                  <div class="wrap-icon">
-                    <span class="icon icon-room"></span>
-                    <input type="text" placeholder="Location" class="form-control">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="mb-5">
-              <form action="#" method="post">
-                <div class="form-group">
-                  <p>Radius around selected destination</p>
-                </div>
-                <div class="form-group">
-                  <input type="range" min="0" max="100" value="20" data-rangeslider>
-                </div>
-              </form>
-            </div>
-            <div class="mb-5">
-              <form action="#" method="post">
-                <div class="form-group">
-                  <p>Category 'Real Estate' is selected</p>
-                  <p>More filters</p>
-                </div>
-                <div class="form-group">
-                  <ul class="list-unstyled">
-                    <li>
-                      <label for="option1">
-                        <input type="checkbox" id="option1">
-                        Residential
-                      </label>
-                    </li>
-                    <li>
-                      <label for="option2">
-                        <input type="checkbox" id="option2">
-                        Commercial
-                      </label>
-                    </li>
-                    <li>
-                      <label for="option3">
-                        <input type="checkbox" id="option3">
-                        Industrial
-                      </label>
-                    </li>
-                    <li>
-                      <label for="option4">
-                        <input type="checkbox" id="option4">
-                        Land
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </form>
-            </div>
-            <div class="mb-5">
-              <h3 class="h6 mb-3">More Info</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti voluptatem placeat facilis,
-                reprehenderit eius officiis.</p>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
@@ -402,15 +331,17 @@
 </template>
 
 <script>
+import FiltersComponent from '@/components/shared-components/FiltersComponent'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 import endpoints from "../endpoints";
+
 const { VUE_APP_BASE_URL: BASE_URL } = process.env;
 
 export default {
   name: 'states-listing-component',
   data(){
     return {
-      estates: []
+      estates: [],
     } 
   },
    mounted(){
@@ -432,7 +363,12 @@ export default {
 
   },
   components: {
+    
+    FiltersComponent ,
     'state-component': PropertyListingComponent
+
+   
+
   }
 }
 </script>
