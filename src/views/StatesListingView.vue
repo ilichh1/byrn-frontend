@@ -13,7 +13,7 @@
             </div>
           </div>
           <div class="col-md-12">
-            <FiltersComponent></FiltersComponent>
+            <FiltersComponent @filtersChanged="onFiltersChanged($event)"></FiltersComponent>
           </div>
         </div>
       </div>
@@ -28,21 +28,27 @@
                 <state-component :estate="element"></state-component>
               </div>
             </div>
-            <div class="col-12 mt-5 text-center">
-              <div class="custom-pagination">
-                <span>1</span>
-                <a href="#">2</a>
-                <a href="#">3</a>
-                <span class="more-page">...</span>
-                <a href="#">10</a>
-              </div>
+            <div class="pagination">
+              <button
+                @click="moveTo(--current_page)"
+                class="cursor-pointer"
+                :class="{ 'no-click': !pagination.prev }"
+              >
+                Anterior
+              </button>
+              <button
+                @click="moveTo(++current_page)"
+                class="cursor-pointer"
+                :class="{ 'no-click': !pagination.next }"
+              >
+                Siguiente
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="newsletter bg-primary py-5">
+    <!--div class="newsletter bg-primary py-5">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-md-6">
@@ -57,14 +63,22 @@
           </div>
         </div>
       </div>
-    </div>
+    </div-->
   </div>
 </template>
 
+<style>
+ .no-click {
+   pointer-events: none;
+   cursor: not-allowed;
+   opacity: 0.5;
+ }
+</style>
+
 <script>
 import endpoints from '../endpoints'
+import { toQueryParam } from '@/utils'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
-
 import FiltersComponent from '@/components/shared-components/FiltersComponent'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 
@@ -72,14 +86,46 @@ export default {
   name: 'states-listing-component',
   data () {
     return {
-      estates: []
+      url: null,
+      current_page: 1,
+      filters: {
+        page: 1
+      },
+      estates: [],
+      pagination: {
+        next: null,
+        prev: null
+      }
     }
   },
   mounted () {
     const { estates } = endpoints
-    this.$http.get(`${BASE_URL}/${estates}`)
-      .then(res => {
-        this.estates = res.data.data.map(estate => {
+    this.url = `${BASE_URL}/${estates}`
+    this.fetchEstates()
+  },
+  methods: {
+    moveTo(page) {
+      this.filters = {
+        ...this.filters,
+        page
+      }
+      this.fetchEstates()
+    },
+    onFiltersChanged(filters) {
+      this.filters = {
+        ...this.filters,
+        ...filters
+      }
+      this.fetchEstates()
+    },
+    fetchEstates() {
+      const { current_url } = this
+      this.$http.get(current_url)
+      .then(({ data: response }) => {
+        const { next_page_url: next, prev_page_url: prev, current_page } = response
+        this.pagination = { next, prev }
+        this.current_page = current_page
+        this.estates = response.data.map(estate => {
           return {
             id: estate.id,
             type: estate.type === 1 ? 'Casa' : 'Terreno',
@@ -91,6 +137,14 @@ export default {
           }
         })
       })
+    }
+  },
+  computed: {
+    current_url () {
+      const { url, filters } = this
+      const queryParam = toQueryParam(filters)
+      return `${url}?${queryParam}`
+    }
   },
   components: {
     FiltersComponent,
