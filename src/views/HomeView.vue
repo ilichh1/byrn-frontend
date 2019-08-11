@@ -2,279 +2,94 @@
   <div class="site-wrap">
     <div class="site-blocks-cover overlay" style="background-image: url(images/summer-grass.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
+        <div class="row align-items-center justify-content-center text-center ">
 
           <div class="col-md-12">
-            <div class="row justify-content-center mb-4">
-              <div class="col-md-8 text-center pt-3">
-                <h1 class="" data-aos="fade-up">Venta de Terrenos</h1>
+            <div class="row justify-content-center mb-4 ">
+              <div class="col-md-8 text-center ">
+                <h1 class="" data-aos="fade-up">Venta/Renta de Propiedades</h1>
                 <p data-aos="fade-up" data-aos-delay="100">Bienes y raíces Nuño</p>
               </div>
             </div>
 
-            <div class="form-search-wrap mb-3" data-aos="fade-up" data-aos-delay="200">
-              <form method="post">
-                <div class="row align-items-center">
-                  <div class="col-lg-12 mb-4 mb-xl-0 col-xl-4">
-                    <input type="text" class="form-control rounded" placeholder="¿Qué estas buscando?">
-                  </div>
-                  <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-                    <div class="wrap-icon">
-                      <span class="icon icon-room"></span>
-                      <input type="text" class="form-control rounded" placeholder="Ubicación">
-                    </div>
+            
 
-                  </div>
-                  <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-                    <div class="select-wrap">
-                      <span class="icon"><span class="icon-keyboard_arrow_down"></span></span>
-                      <select class="form-control rounded" name="" id="">
-                        <option value="">Todas las categorías</option>
-                        <option value="">Casa</option>
-                        <option value="">Cortina</option>
-                        <option value="">Terreno</option>
-                        <option value="">Departamento</option>
-                        <option value="">Otros</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-12 col-xl-2 ml-auto text-right">
-                    <input type="submit" class="btn btn-primary btn-block rounded" value="Search">
-                  </div>
-
-                </div>
-              </form>
-            </div>
-
-            <div class="row text-left trending-search" data-aos="fade-up"  data-aos-delay="300">
-              <div class="col-12">
-                <h2 class="d-inline-block">Búsquedas recientes:</h2>
-                <a class="mr-2" href="#">iPhone</a>
-                <a class="mr-2" href="#">Cars</a>
-                <a class="mr-2" href="#">Flowers</a>
-                <a class="mr-2" href="#">House</a>
-              </div>
-            </div>
-
+        
           </div>
         </div>
       </div>
     </div>
 
     <div class="site-section bg-light">
-      <div class="container">
+      <div class="container ">
 
-        <div class="row">
-          <div class="col-12">
-            <h2 class="h5 mb-4 text-black">Propiedades Destacadas</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12  block-13">
-            <div class="owl-carousel nonloop-block-13">
-              <PropertyListingComponent
-                v-for="(property, index) in featuredProperties"
-                :key="index"
-                :property="property"/>
-            </div>
-          </div>
+        <div class="row align-items-center justify-content-center text-center">
+          
 
+             <div class="col-md-7 text-center border-primary ">
+            <h2 class="font-weight-light text-primary">¿Quiénes somos?</h2>
+             </div>
+            <blockquote class="pt-5">
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+              </blockquote>
+          
+              
+              <div class="col mb-4 pt-5">
+           <font-awesome-icon icon="coffee" style="font-size: 150px" />
+             
+
+                <h1 class="h3 mb-1 text-black pt-5" >Misión</h1>
+            <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+              </blockquote>
+              </div>
+              
+               <div class="col mb-4 pt-5">
+                   <font-awesome-icon icon="coffee" style="font-size: 150px" />
+                  <h1 class="h3 mb-1 text-black pt-5">Visión</h1>
+            <blockquote>
+                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+              </blockquote>
+              </div>
+
+  
+               <div class="col mb-4 pt-5">
+                   <font-awesome-icon icon="coffee" style="font-size: 150px" />
+                  <h1 class="h3 mb-1 text-black pt-5">Objetivos</h1>
+            <blockquote>
+                <p>
+                    
+                ipsum dolor sit amet
+                <br>
+                Consectetur adipiscing elit
+                <br>
+                Integer molestie lorem at massa
+                <br>
+                Facilisis in pretium nisl aliquet
+                <br>
+                Nulla volutpat aliquam velit
+                <br>
+                 Nulla volutpat aliquam velit
+        
+            
+            </p>
+                </blockquote>
+              </div>
+      
         </div>
+   
       </div>
     </div>
 
-    <div class="site-section" data-aos="fade">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary">Popular Categories</h2>
-            <p class="color-black-opacity-5">Lorem Ipsum Dolor Sit Amet</p>
-          </div>
-        </div>
-        <div class="overlap-category mb-5">
-          <div class="row align-items-stretch no-gutters">
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
-              <a href="#" class="popular-category h-100">
-                <span class="icon"><span class="flaticon-car"></span></span>
-                <span class="caption mb-2 d-block">Cars &amp; Vehicles</span>
-                <span class="number">1,921</span>
-              </a>
-            </div>
+    
 
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
-              <a href="#" class="popular-category h-100">
-                <span class="icon"><span class="flaticon-closet"></span></span>
-                <span class="caption mb-2 d-block">Furniture</span>
-                <span class="number">2,339</span>
-              </a>
-            </div>
-
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
-              <a href="#" class="popular-category h-100">
-                <span class="icon"><span class="flaticon-home"></span></span>
-                <span class="caption mb-2 d-block">Real Estate</span>
-                <span class="number">4,398</span>
-              </a>
-            </div>
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
-              <a href="#" class="popular-category h-100">
-                <span class="icon"><span class="flaticon-open-book"></span></span>
-                <span class="caption mb-2 d-block">Books &amp; Magazines</span>
-                <span class="number">3,298</span>
-              </a>
-            </div>
-
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
-              <a href="#" class="popular-category h-100">
-                <span class="icon"><span class="flaticon-tv"></span></span>
-                <span class="caption mb-2 d-block">Electronics</span>
-                <span class="number">`2,932</span>
-              </a>
-            </div>
-
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
-              <a href="#" class="popular-category h-100">
-                <span class="icon"><span class="flaticon-pizza"></span></span>
-                <span class="caption mb-2 d-block">Other</span>
-                <span class="number">183</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-7 text-left border-primary">
-            <h2 class="font-weight-light text-primary">Trending Today</h2>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-lg-6">
-
-            <div class="d-block d-md-flex listing">
-              <a href="listings-single.html" class="img d-block" style="background-image: url('images/img_2.jpg')"></a>
-              <div class="lh-content">
-                <span class="category">Real Estate</span>
-                <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                <h3><a href="listings-single.html">Own New House</a></h3>
-                <address>Don St, Brooklyn, New York</address>
-                <p class="mb-0">
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-secondary"></span>
-                  <span class="review">(3 Reviews)</span>
-                </p>
-              </div>
-            </div>
-            <div class="d-block d-md-flex listing">
-                <a href="listings-single.html" class="img d-block" style="background-image: url('images/img_3.jpg')"></a>
-                <div class="lh-content">
-                  <span class="category">Furniture</span>
-                  <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                  <h3><a href="listings-single.html">Wooden Chair &amp; Table</a></h3>
-                  <address>Don St, Brooklyn, New York</address>
-                  <p class="mb-0">
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-secondary"></span>
-                    <span class="review">(3 Reviews)</span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="d-block d-md-flex listing">
-                <a href="listings-single.html" class="img d-block" style="background-image: url('images/img_4.jpg')"></a>
-                <div class="lh-content">
-                  <span class="category">Electronics</span>
-                  <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                  <h3><a href="listings-single.html">iPhone X gray</a></h3>
-                  <address>Don St, Brooklyn, New York</address>
-                  <p class="mb-0">
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-secondary"></span>
-                    <span class="review">(3 Reviews)</span>
-                  </p>
-                </div>
-              </div>
-
-          </div>
-          <div class="col-lg-6">
-
-            <div class="d-block d-md-flex listing">
-              <a href="listings-single.html" class="img d-block" style="background-image: url('images/img_1.jpg')"></a>
-              <div class="lh-content">
-                <span class="category">Cars &amp; Vehicles</span>
-                <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                <h3><a href="listings-single.html">New Black Car</a></h3>
-                <address>Don St, Brooklyn, New York</address>
-                <p class="mb-0">
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-secondary"></span>
-                  <span class="review">(3 Reviews)</span>
-                </p>
-              </div>
-            </div>
-
-            <div class="d-block d-md-flex listing">
-              <a href="listings-single.html" class="img d-block" style="background-image: url('images/img_2.jpg')"></a>
-              <div class="lh-content">
-                <span class="category">Real Estate</span>
-                <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                <h3><a href="listings-single.html">Own New House</a></h3>
-                <address>Don St, Brooklyn, New York</address>
-                <p class="mb-0">
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-warning"></span>
-                  <span class="icon-star text-secondary"></span>
-                  <span class="review">(3 Reviews)</span>
-                </p>
-              </div>
-            </div>
-            <div class="d-block d-md-flex listing">
-                <a href="listings-single.html" class="img d-block" style="background-image: url('images/img_3.jpg')"></a>
-                <div class="lh-content">
-                  <span class="category">Furniture</span>
-                  <a href="#" class="bookmark"><span class="icon-heart"></span></a>
-                  <h3><a href="listings-single.html">Wooden Chair &amp; Table</a></h3>
-                  <address>Don St, Brooklyn, New York</address>
-                  <p class="mb-0">
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-warning"></span>
-                    <span class="icon-star text-secondary"></span>
-                    <span class="review">(3 Reviews)</span>
-                  </p>
-                </div>
-              </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="site-section bg-white">
       <div class="container">
 
         <div class="row justify-content-center mb-5">
           <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary">Testimonials</h2>
+            <h2 class="font-weight-light text-primary">Reseñas</h2>
           </div>
         </div>
 
@@ -283,21 +98,21 @@
             <div class="testimonial">
               <figure class="mb-4">
                 <img src="images/person_3.jpg" alt="Image" class="img-fluid mb-3">
-                <p>John Smith</p>
+                <p>Ezequiel Rodriguez</p>
               </figure>
               <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p>&ldquo;Increíble sitio, econtre mi propiedad ideal de una manera muy sencilla, lo recomiendo totalmente !&rdquo;</p>
               </blockquote>
             </div>
           </div>
           <div>
             <div class="testimonial">
               <figure class="mb-4">
-                <img src="images/person_2.jpg" alt="Image" class="img-fluid mb-3">
-                <p>Christine Aguilar</p>
+                <img src="images/person_5.jpg" alt="Image" class="img-fluid mb-3">
+                <p>Karla Mora  </p>
               </figure>
               <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p>&ldquo;La atención que me dieron desde que agende mi cita es sorprendente, gracias a BYRN encontre la propiedad que se ajustaba a mis necesidades.&rdquo;</p>
               </blockquote>
             </div>
           </div>
@@ -306,7 +121,7 @@
             <div class="testimonial">
               <figure class="mb-4">
                 <img src="images/person_4.jpg" alt="Image" class="img-fluid mb-3">
-                <p>Robert Spears</p>
+                <p>Abraham Sánchez</p>
               </figure>
               <blockquote>
                 <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
@@ -318,7 +133,7 @@
             <div class="testimonial">
               <figure class="mb-4">
                 <img src="images/person_5.jpg" alt="Image" class="img-fluid mb-3">
-                <p>Bruce Rogers</p>
+                <p>Karla Mora </p>
               </figure>
               <blockquote>
                 <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
@@ -330,46 +145,7 @@
       </div>
     </div>
 
-    <div class="site-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center border-primary">
-            <h2 class="font-weight-light text-primary">Our Blog</h2>
-            <p class="color-black-opacity-5">See Our Daily News &amp; Updates</p>
-          </div>
-        </div>
-        <div class="row mb-3 align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_1.jpg" alt="Image" class="img-fluid rounded">
-              <h2 class="font-size-regular"><a href="#" class="text-black">Many People Selling Online</a></h2>
-              <div class="meta mb-3">by Mark Spiker<span class="mx-1">&bullet;</span> Jan 18, 2019 <span class="mx-1">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_2.jpg" alt="Image" class="img-fluid rounded">
-              <h2 class="font-size-regular"><a href="#" class="text-black">Many People Selling Online</a></h2>
-              <div class="meta mb-3">by Mark Spiker<span class="mx-1">&bullet;</span> Jan 18, 2019 <span class="mx-1">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <img src="images/img_3.jpg" alt="Image" class="img-fluid rounded">
-              <h2 class="font-size-regular"><a href="#" class="text-black">Many People Selling Online</a></h2>
-              <div class="meta mb-3">by Mark Spiker<span class="mx-1">&bullet;</span> Jan 18, 2019 <span class="mx-1">&bullet;</span> <a href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
-            </div>
-          </div>
-
-          <div class="col-12 text-center mt-4">
-            <a href="#" class="btn btn-primary rounded py-2 px-4 text-white">View All Posts</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     <div class="newsletter bg-primary py-5">
       <div class="container">

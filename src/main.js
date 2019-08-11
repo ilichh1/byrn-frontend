@@ -3,12 +3,19 @@ import App from './App.vue'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import router from './router'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStumbleuponCircle } from '@fortawesome/free-brands-svg-icons'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // Google Maps
 import * as VueGoogleMaps from 'vue2-google-maps'
 // Promise pollyfill
 import 'es6-promise/auto'
 import { store } from './store'
 
+library.add(faCoffee)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.use(VueAxios, axios)
 Vue.use(VueGoogleMaps, {
   load: {
