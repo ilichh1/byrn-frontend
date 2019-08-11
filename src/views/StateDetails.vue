@@ -17,7 +17,7 @@
     <section class="container py-4 bg-white" id="estate-detail">
       <div class="row">
         <div class="col-md-8">
-          <h2 class="text-black">Titulo de la propiedad</h2>
+          <h2 class="text-black">{{ estate.name }}</h2>
           <hr>
           <div class="row">
             <div class="col-12 block-13">
