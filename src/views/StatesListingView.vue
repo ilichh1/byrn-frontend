@@ -98,10 +98,9 @@ export default {
       }
     }
   },
-  mounted () {
+  created() {
     const { estates } = endpoints
     this.url = `${BASE_URL}/${estates}`
-    this.fetchEstates()
   },
   methods: {
     moveTo(page) {
