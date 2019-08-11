@@ -21,7 +21,7 @@
 export default {
   name: 'property-listing-component',
   mounted () {
-    console.log(Object.keys(this.estate))
+    // console.log(Object.keys(this.estate))
   },
   props: {
     estate: {
