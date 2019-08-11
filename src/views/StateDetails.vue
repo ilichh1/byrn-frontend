@@ -228,7 +228,8 @@ export default {
           meter_price: this.estate.meter_price,
           latitude: this.estate.latitude,
           longitude: this.estate.longitude,
-          address: this.estate.address
+          address: this.estate.address,
+          first_page_url: this.estate.first_page_url
         }
       })
 
