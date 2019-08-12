@@ -15,7 +15,8 @@
           <div class="col-6 col-xl-2">
             <router-link to="/">
               <h1 class="mb-0 site-logo">
-                <img src="/images/BYRN-LOGO.png" width="auto" height="64">
+                <img src="/images/BYRN-LOGO.png" width="auto" height="84" style="-webkit-filter: brightness(130%);
+filter: brightness(130%);">
               </h1>
             </router-link>
           </div>
@@ -30,7 +31,7 @@
                 </li>
                 <li  class="border-right pr-4">
                   <router-link to="/states">
-                    Terrenos
+                    Propiedades
                   </router-link>
                 </li>
                 <li v-if="!isUserLoggedIn">

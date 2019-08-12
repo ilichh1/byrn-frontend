@@ -1,4 +1,5 @@
 <template>
+<div class="col-12">
   <div class="form-search-wrap mb-3" data-aos="fade-up" data-aos-delay="200">
     <form method="post">
       <div class="row align-items-center">
@@ -101,6 +102,7 @@
       </div>
     </form>
   </div>
+</div>
 </template>
 
 <script>
