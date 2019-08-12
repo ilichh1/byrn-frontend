@@ -127,7 +127,7 @@ export default {
             return {
               id: estate.id,
               type: estate.type === 1 ? 'Casa' : 'Terreno',
-              image: !!estate.images[0] ? estate.images[0].url : 'images/img_1.jpg',
+              image: estate.images[0] ? estate.images[0].url : 'images/img_1.jpg',
               name: estate.name,
               address: estate.address,
               is_favorite: false,

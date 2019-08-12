@@ -32,11 +32,11 @@ import _ from 'lodash'
 
 export default {
   name: 'byrn-image-carousel',
-  mounted() {
+  mounted () {
     this.initCarousel()
   },
   methods: {
-    initCarousel() {
+    initCarousel () {
       if (this.images.length === 0) {
         return
       }
@@ -44,10 +44,10 @@ export default {
         loop: true,
         margin: 10,
         responsiveClass: true,
-        lazyLoad:true,
-        nav:true,
+        lazyLoad: true,
+        nav: true,
         dots: false,
-        navText : ["<<",">>"],
+        navText: ['<<', '>>'],
         items: 1
       })
     }
@@ -65,7 +65,7 @@ export default {
     }
   },
   watch: {
-    images: _.debounce(function() {
+    images: _.debounce(function () {
       this.initCarousel()
     }, 100)
   }

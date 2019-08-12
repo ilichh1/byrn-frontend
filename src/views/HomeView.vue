@@ -1,6 +1,6 @@
 <template>
   <div class="site-wrap">
-    
+
       <div
       class="site-blocks-cover inner-page-cover overlay"
       style="background-image: url(images/summer-grass.jpg);"
@@ -19,21 +19,20 @@
           </div>
         </div>
       </div>
-     
+
       <img src="images/vectores.svg"  style="position: absolute;
     left: 0px;
     right: 0px;
     bottom: -6px;
     max-width: 100 vw;
     ">
-     
+
     </div>
 
     <div class="site-section bg-light">
       <div class="container ">
 
         <div class="row align-items-center justify-content-center text-center">
-          
 
              <div class="col-md-7 text-center border-primary ">
             <h2 class="font-weight-light text-primary ">¿Quiénes somos?</h2>
@@ -41,18 +40,16 @@
             <blockquote class="pt-5">
                 <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
               </blockquote>
-          
-              
+
               <div class="col-12 col-lg-4 pt-5">
            <font-awesome-icon icon="chart-bar" style="font-size: 150px" />
-             
 
                 <h1 class="h3 mb-1 text-black pt-5" >Misión</h1>
             <blockquote>
                 <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
               </blockquote>
               </div>
-              
+
                <div class="col-12 col-lg-4 pt-5">
                    <font-awesome-icon icon="cogs" style="font-size: 150px" />
                   <h1 class="h3 mb-1 text-black pt-5">Visión</h1>
@@ -61,13 +58,12 @@
               </blockquote>
               </div>
 
-  
                <div class="col-12 col-lg-4 pt-5">
                    <font-awesome-icon icon="code-branch" style="font-size: 150px" />
                   <h1 class="h3 mb-1 text-black pt-5">Objetivos</h1>
             <blockquote>
                 <p>
-                    
+
                 ipsum dolor sit amet
                 <br>
                 Consectetur adipiscing elit
@@ -79,19 +75,15 @@
                 Nulla volutpat aliquam velit
                 <br>
                  Nulla volutpat aliquam velit
-        
-            
+
             </p>
                 </blockquote>
               </div>
-      
+
         </div>
-   
+
       </div>
     </div>
-
-    
-
 
     <div class="site-section bg-white">
       <div class="container">
@@ -138,13 +130,9 @@
             </div>
           </div>
 
-         
-
         </div>
       </div>
     </div>
-
-    
 
     <div class="newsletter bg-primary py-5">
       <div class="container">
