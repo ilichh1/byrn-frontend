@@ -208,7 +208,7 @@ export default {
     estateImages () {
       try {
         return this.estate.images.map(o => o.url)
-      } catch (e) {
+      } catch (e) {
         return ['/images/img_1.jpg']
       }
     }

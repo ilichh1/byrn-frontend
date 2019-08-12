@@ -42,6 +42,7 @@
                         <input
                           type="submit"
                           value="Ingresar"
+                          @click.prevent="onLogin()"
                           class="btn btn-primary py-2 px-4 text-white"
                         />
                       </div>
@@ -59,6 +60,7 @@
 
 <script>
 import endpoints from '../endpoints'
+import { actions as authActions } from '@/store-modules/auth/types'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
 export default {
@@ -77,8 +79,12 @@ export default {
         ...this.form
       }
       this.$http.post(`${BASE_URL}/${login}`, body)
-        .then(res => {
-          console.log(res)
+        .then(({ data }) => {
+          const { user, token } = data
+          this.$store.dispatch(authActions.doLogin, { user, token })
+            .then(() => {
+              this.$router.replace('/dashboard')
+            })
         })
     }
   }

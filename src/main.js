@@ -11,12 +11,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 // Google Maps
 import * as VueGoogleMaps from 'vue2-google-maps'
 // Promise pollyfill
-import 'es6-promise/auto'
+import 'es6-promise'
+// store module
 import { store } from './store'
+// HighCharts
+import HighchartsVue from 'highcharts-vue'
 
 library.add(faChartBar, faCogs, faCodeBranch)
-
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.use(HighchartsVue)
 Vue.use(VueAxios, axios)
 Vue.use(VueGoogleMaps, {
   load: {

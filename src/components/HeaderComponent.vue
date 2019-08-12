@@ -8,9 +8,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-
     <section class="site-navbar container py-0 " role="banner">
-
       <!-- <div class="container"> -->
         <div class="row align-items-center">
 
@@ -35,21 +33,29 @@
                     Terrenos
                   </router-link>
                 </li>
-                <li>
+                <li v-if="!isUserLoggedIn">
                   <router-link to="/login" class="cta">
                     <span class="bg-primary text-white rounded">Iniciar Sesion</span>
                   </router-link>
                 </li>
-                <li class="has-children pr-4">
-                  <a href="#"> Usuario</a>
+                <li v-if="isUserLoggedIn" class="has-children px-4">
+                  <a href="#">Usuario</a>
                   <ul class="dropdown">
-                    <li><router-link to="/editp"><a href="#">Editar Perfil</a>
-
-                  </router-link></li>
+                    <li>
+                      <router-link to="/editp">
+                        <a href="#">Editar Perfil</a>
+                      </router-link>
+                    </li>
                     <li><a href="#">Mis Favoritos</a></li>
-                    <li><a href="#">Cerrar Sesion</a></li>
+                    <li>
+                      <router-link to="/dashboard/estate">
+                        Subir propiedad
+                      </router-link>
+                    </li>
+                    <li class="cursor-pointer">
+                      <a @click.prevent="onLogOut()" href="#">Cerrar sesión</a>
+                    </li>
                   </ul>
-
                 </li>
               </ul>
             </nav>
@@ -67,7 +73,25 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'
+import { getters as authGetters } from '@/store-modules/auth/types.js'
+import { actions as mainActions } from '@/store'
+
 export default {
-  name: 'header-component'
+  name: 'header-component',
+  computed: {
+    ...mapGetters([
+      authGetters.isUserLoggedIn
+    ])
+  },
+  methods: {
+    onLogOut () {
+      this.logout()
+        .then(() => this.$router.replace('/'))
+    },
+    ...mapActions({
+      logout: mainActions.doLogout
+    })
+  }
 }
 </script>
