@@ -7,7 +7,7 @@ import Home from '@/views/HomeView.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history', // TODO: Handle the file redirection on the server
   base: process.env.BASE_URL,
   routes: [
     {
@@ -70,6 +70,11 @@ export default new Router({
       component: function () {
         return import(/* webpackChunkName: "editar-perfil" */ '@/views/EditProfileView.vue')
       }
+    },
+    {
+      path: '/favorites',
+      name: 'favorites',
+      component: () => import(/* webpackChunkName: "favoritos" */ '@/views/FavoritesView.vue')
     }
   ]
 })

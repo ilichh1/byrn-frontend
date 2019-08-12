@@ -20,8 +20,18 @@ import HighchartsVue from 'highcharts-vue'
 library.add(faChartBar, faCogs, faCodeBranch)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
+const { VUE_APP_BASE_URL: baseURL } = process.env
+export const axiosInstance = axios.create({
+  baseURL,
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json',
+    'Application-Name': 'BYRN',
+  }
+})
+
 Vue.use(HighchartsVue)
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axiosInstance)
 Vue.use(VueGoogleMaps, {
   load: {
     key: 'AIzaSyB-EQhrThzt8vt3LirSZHuRMkDJj6tbG7o'

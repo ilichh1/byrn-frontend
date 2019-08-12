@@ -93,8 +93,8 @@
             </span>
             <select class="form-control rounded" v-model="orderBy_attribute">
               <option value="name">Nombre</option>
-              <option value="price">Precio</option>
-              <option value="area">Área</option>
+              <option value="seller_price">Precio</option>
+              <option value="surface_area">Área</option>
               <option value="created_at">Fecha</option>
             </select>
           </div>
@@ -117,7 +117,7 @@ export default {
       meter_price_more_than: 100,
       meter_price_less_than: 2000,
       surface_area_more_than: 100,
-      surface_area_less_than: 10000,
+      surface_area_less_than: 100000,
       estate_type: 1,
       sell_or_rent: 0,
       orderBy_order: 'ASC',

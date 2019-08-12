@@ -47,7 +47,11 @@ filter: brightness(130%);">
                         <a href="#">Editar Perfil</a>
                       </router-link>
                     </li>
-                    <li><a href="#">Mis Favoritos</a></li>
+                    <li>
+                      <router-link to="/favorites">
+                        Mis Favoritos
+                      </router-link>
+                    </li>
                     <li>
                       <router-link to="/dashboard/estate">
                         Subir propiedad
