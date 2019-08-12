@@ -19,14 +19,17 @@
           </div>
         </div>
       </div>
-
+      <div style=" 
+   
+   ;"> 
       <img src="images/vectores.svg"  style="position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: -6px;
-    max-width: 100 vw;
-    ">
-
+      width: 100%;
+      height: auto;
+      left: 0px;
+      right: 0px;
+      bottom: -6px;
+      ">
+      </div>
     </div>
 
     <div class="site-section bg-light">
@@ -134,23 +137,7 @@
       </div>
     </div>
 
-    <div class="newsletter bg-primary py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <h2>Newsletter</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="col-md-6">
 
-            <form class="d-flex">
-              <input type="text" class="form-control" placeholder="Email">
-              <input type="submit" value="Subscribe" class="btn btn-white">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 

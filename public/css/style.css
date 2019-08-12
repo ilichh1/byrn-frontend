@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5,
     border: 2px solid #fff; }
     .btn.btn-outline-white:hover {
       background: #fff;
-      color: #2f89fc !important; }
+      color: #beeb9f !important; }
   .btn.btn-md {
     padding: 10px 30px; }
 
@@ -139,20 +139,20 @@ h1, h2, h3, h4, h5,
 
 .site-footer {
   padding: 4em 0;
-  background: #333333; }
+  background: rgba(233,248,223); }
   @media (min-width: 768px) {
     .site-footer {
-      padding: 8em 0; } }
+      padding: 2em 0; } }
   .site-footer .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
   .site-footer p {
-    color: #737373; }
+    color: rgba(35,35,35); }
   .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5 {
     color: #fff; }
   .site-footer a {
-    color: #999999; }
+    color: #000; }
     .site-footer a:hover {
-      color: white; }
+      color:#2f89fc ; }
   .site-footer ul li {
     margin-bottom: 10px; }
   .site-footer .footer-heading {
@@ -1340,7 +1340,7 @@ h1, h2, h3, h4, h5,
     bottom: 0;
     width: 80px;
     height: 3px;
-    background: #2f89fc; }
+    background: #000; }
   .border-primary.text-center:after {
     left: 50%;
     -webkit-transform: translateX(-50%);
