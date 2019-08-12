@@ -1,23 +1,32 @@
 <template>
   <div class="site-wrap">
-    <div class="site-blocks-cover overlay" style="background-image: url(images/summer-grass.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center ">
-
-          <div class="col-md-12">
-            <div class="row justify-content-center mb-4 ">
+    
+      <div
+      class="site-blocks-cover inner-page-cover overlay"
+      style="background-image: url(images/summer-grass.jpg);"
+      data-aos="fade"
+      data-stellar-background-ratio="1"
+    >
+      <div class="container" >
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-12 ">
+             <div class="row justify-content-center mb-4 ">
               <div class="col-md-8 text-center ">
-                <h1 class="" data-aos="fade-up">Venta/Renta de Propiedades</h1>
-                <p data-aos="fade-up" data-aos-delay="100">Bienes y raíces Nuño</p>
+                <h1  data-aos="fade-up">Venta/Renta de Propiedades</h1>
+                <p   data-aos="fade-up" data-aos-delay="100">Bienes y raíces Nuño</p>
               </div>
             </div>
-
-            
-
-        
           </div>
         </div>
       </div>
+     
+      <img src="images/vectores.svg"  style="position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: -6px;
+    max-width: 100 vw;
+    ">
+     
     </div>
 
     <div class="site-section bg-light">
@@ -27,15 +36,15 @@
           
 
              <div class="col-md-7 text-center border-primary ">
-            <h2 class="font-weight-light text-primary">¿Quiénes somos?</h2>
+            <h2 class="font-weight-light text-primary ">¿Quiénes somos?</h2>
              </div>
             <blockquote class="pt-5">
                 <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
               </blockquote>
           
               
-              <div class="col mb-4 pt-5">
-           <font-awesome-icon icon="coffee" style="font-size: 150px" />
+              <div class="col-12 col-lg-4 pt-5">
+           <font-awesome-icon icon="chart-bar" style="font-size: 150px" />
              
 
                 <h1 class="h3 mb-1 text-black pt-5" >Misión</h1>
@@ -44,8 +53,8 @@
               </blockquote>
               </div>
               
-               <div class="col mb-4 pt-5">
-                   <font-awesome-icon icon="coffee" style="font-size: 150px" />
+               <div class="col-12 col-lg-4 pt-5">
+                   <font-awesome-icon icon="cogs" style="font-size: 150px" />
                   <h1 class="h3 mb-1 text-black pt-5">Visión</h1>
             <blockquote>
                 <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
@@ -53,8 +62,8 @@
               </div>
 
   
-               <div class="col mb-4 pt-5">
-                   <font-awesome-icon icon="coffee" style="font-size: 150px" />
+               <div class="col-12 col-lg-4 pt-5">
+                   <font-awesome-icon icon="code-branch" style="font-size: 150px" />
                   <h1 class="h3 mb-1 text-black pt-5">Objetivos</h1>
             <blockquote>
                 <p>
@@ -124,22 +133,12 @@
                 <p>Abraham Sánchez</p>
               </figure>
               <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p>&ldquo;Simplemente Sorprendente, encontre el terreno perfecto para mis hectáreas de aguacate &rdquo;</p>
               </blockquote>
             </div>
           </div>
 
-          <div>
-            <div class="testimonial">
-              <figure class="mb-4">
-                <img src="images/person_5.jpg" alt="Image" class="img-fluid mb-3">
-                <p>Karla Mora </p>
-              </figure>
-              <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
-              </blockquote>
-            </div>
-          </div>
+         
 
         </div>
       </div>

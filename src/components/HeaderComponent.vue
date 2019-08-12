@@ -25,22 +25,15 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active">
+                <li class=" active">
                   <router-link to="/">
                     Inicio
                   </router-link>
                 </li>
-                <li>
+                <li  class="border-right pr-4">
                   <router-link to="/states">
                     Terrenos
                   </router-link>
-                </li>
-                <li class="has-children border-right pr-4">
-                  <a href="#">Acerca de</a>
-                  <ul class="dropdown">
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Filosofia</a></li>
-                  </ul>
                 </li>
                 <li>
                   <router-link to="/login" class="cta">
@@ -48,7 +41,7 @@
                   </router-link>
                 </li>
                 <li class="has-children pr-4">
-                  <a href="#">Usuario</a>
+                  <a href="#"> Usuario</a>
                   <ul class="dropdown">
                     <li><router-link to="/editp"><a href="#">Editar Perfil</a>
 
