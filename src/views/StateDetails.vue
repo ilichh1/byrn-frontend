@@ -105,7 +105,7 @@
 // import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 import DatePicker from 'vue2-datepicker'
 import endpoints from '../endpoints'
-import ByrnImageCarousel from '@/components/shared-components/ImageCarousel.vue';
+import ByrnImageCarousel from '@/components/shared-components/ImageCarousel.vue'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
 export default {
@@ -205,10 +205,10 @@ export default {
     }
   },
   computed: {
-    estateImages() {
+    estateImages () {
       try {
         return this.estate.images.map(o => o.url)
-      } catch (e) {
+      } catch (e) {
         return ['/images/img_1.jpg']
       }
     }

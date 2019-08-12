@@ -129,7 +129,7 @@ export default {
   methods: {
     onFilterChanged: _.debounce((vm) => {
       vm.$emit('filtersChanged', vm.filters)
-    }, 1000)
+    }, 100)
   },
   computed: {
     filters () {

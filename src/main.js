@@ -6,9 +6,13 @@ import router from './router'
 // Google Maps
 import * as VueGoogleMaps from 'vue2-google-maps'
 // Promise pollyfill
-import 'es6-promise/auto'
+import 'es6-promise'
+// store module
 import { store } from './store'
+// HighCharts
+import HighchartsVue from 'highcharts-vue'
 
+Vue.use(HighchartsVue)
 Vue.use(VueAxios, axios)
 Vue.use(VueGoogleMaps, {
   load: {
