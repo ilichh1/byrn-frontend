@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist'
 
 // Auth state
 import { initialState as authInitialState } from '@/store-modules/auth'
@@ -42,5 +43,6 @@ export const store = new Vuex.Store({
   modules: {
     auth,
     estates
-  }
+  },
+  plugins: [new VuexPersistence().plugin]
 })
