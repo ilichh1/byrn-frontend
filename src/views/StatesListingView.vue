@@ -47,22 +47,6 @@
         </div>
       </div>
     </div>
-    <!--div class="newsletter bg-primary py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <h2>Newsletter</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="col-md-6">
-            <form class="d-flex">
-              <input type="text" class="form-control" placeholder="Email">
-              <input type="submit" value="Subscribe" class="btn btn-white">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div-->
   </div>
 </template>
 
@@ -76,6 +60,7 @@
 
 <script>
 import endpoints from '../endpoints'
+import { estateMapFunction } from '@/utils'
 import { toQueryParam } from '@/utils'
 import FiltersComponent from '@/components/shared-components/FiltersComponent'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
@@ -123,17 +108,7 @@ export default {
           const { next_page_url: next, prev_page_url: prev, currentPage } = response
           this.pagination = { next, prev }
           this.currentPage = currentPage
-          this.estates = response.data.map(estate => {
-            return {
-              id: estate.id,
-              type: estate.type === 1 ? 'Casa' : 'Terreno',
-              image: estate.images[0] ? estate.images[0].url : 'images/img_1.jpg',
-              name: estate.name,
-              address: estate.address,
-              is_favorite: false,
-              visit_count: 23
-            }
-          })
+          this.estates = response.data.map(estateMapFunction)
         })
     }
   },

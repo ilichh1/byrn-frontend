@@ -1,9 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-// BYRN Store modules
+// Auth state
 import { initialState as authInitialState } from '@/store-modules/auth'
 import auth from '@/store-modules/auth'
+import estates from '@/store-modules/estates'
+
 
 Vue.use(Vuex)
 
@@ -38,6 +40,7 @@ export const store = new Vuex.Store({
     }
   },
   modules: {
-    auth
+    auth,
+    estates
   }
 })
