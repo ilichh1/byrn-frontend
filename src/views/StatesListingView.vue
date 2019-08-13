@@ -11,9 +11,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-12">
+          <!--div class="col-md-12">
             <FiltersComponent @filtersChanged="onFiltersChanged($event)"></FiltersComponent>
-          </div>
+          </div-->
         </div>
       </div>
     </div>
@@ -21,9 +21,14 @@
     <div class="site-section">
       <div class="container">
         <div class="row">
+          <div class="col-12">
+            <FiltersComponent @filtersChanged="onFiltersChanged($event)"></FiltersComponent>
+          </div>
           <div class="col-lg-12">
+            <h3 class="my-3">Listado</h3>
+            <hr>
             <div class="row">
-              <div v-for="(element, index) in estates" :key="`${element.name}-${index}`" class="col-md-2 col-lg-4">
+              <div v-for="(element, index) in estates" :key="`${element.name}-${index}`" class="col-12 col-md-6 col-lg-4">
                 <state-component :estate="element"></state-component>
               </div>
             </div>

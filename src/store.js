@@ -12,15 +12,22 @@ Vue.use(Vuex)
 
 const initialState = () => ({
   appName: 'BYRN',
+  isModalHidden: true,
   auth: authInitialState()
 })
 
 export const actions = {
-  doLogout: 'doLogout'
+  doLogout: 'doLogout',
+  changeLoaderState: 'changeLoaderState'
 }
 
 export const mutations = {
-  logout: 'logout'
+  logout: 'logout',
+  setLoaderState: 'setLoaderState'
+}
+
+export const getters = {
+  isModalHidden: 'isModalHiddenGetter'
 }
 
 export const store = new Vuex.Store({
@@ -29,15 +36,23 @@ export const store = new Vuex.Store({
     [actions.doLogout]: ({ commit }) => new Promise((resolve, reject) => {
       commit(mutations.logout)
       resolve()
+    }),
+    [actions.changeLoaderState]: ({ commit }, loaderState) => new Promise((resolve) => {
+      commit(actions.setLoaderState, loaderState)
     })
   },
-  getters: { },
+  getters: {
+    [getters.isModalHidden]: ({ isModalHidden }) => isModalHidden
+  },
   mutations: {
     [mutations.logout] (state) {
       const newState = initialState()
       Object.keys(newState).forEach(key => {
         state[key] = newState[key]
       })
+    },
+    [mutations.setLoaderState] (state, newState) {
+      state.isModalHidden = newState
     }
   },
   modules: {

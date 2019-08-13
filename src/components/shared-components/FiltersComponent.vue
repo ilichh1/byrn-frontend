@@ -1,102 +1,111 @@
 <template>
-<div class="col-12">
+<div id="filters-component" class="container mb-4 px-3 py-4 border border-radius">
+  <h4>Filtros</h4>
   <div class="form-search-wrap mb-3" data-aos="fade-up" data-aos-delay="200">
-    <form method="post">
+    <form>
       <div class="row align-items-center">
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-          <p>
-            <label class="form-control-rounded text-black">Precio mt2:</label>
-          </p>
-          <range-slider
-            class="form-control-rounded slider"
-            min="100"
-            max="5000"
-            step="50"
-            v-model="meter_price_more_than"
-          ></range-slider>
-          <label class="text-black d-block">Min: $ {{meter_price_more_than}}</label>
-        </div>
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-          <p>
-            <label class="text-black">Superficie:</label>
-          </p>
-          <range-slider
-            class="slider"
-            min="1000"
-            max="100000"
-            step="100"
-            v-model="surface_area_more_than"
-          ></range-slider>
-          <label class="text-black d-block">Min: {{surface_area_more_than}} m2</label>
-        </div>
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-          <label for="tipo-propiedad">Tipo</label>
-          <div class="select-wrap">
-            <span class="icon">
-              <span class="icon-keyboard_arrow_down"></span>
-            </span>
-            <select id="tipo-propiedad" class="form-control rounded" v-model="estate_type">
-              <option value="1">Terreno</option>
-              <option value="2">Casa</option>
-            </select>
+        <div class="col-12 col-md-4 col-lg-3">
+          <div>
+            <p>
+              <label class="form-control-rounded text-black">Precio mt2:</label>
+            </p>
+            <range-slider
+              class="form-control-rounded slider"
+              min="100"
+              max="5000"
+              step="50"
+              v-model="meter_price_more_than"
+            ></range-slider>
+            <label class="text-black d-block">Min: $ {{meter_price_more_than}}</label>
+          </div>
+          <div>
+            <range-slider
+              class="slider"
+              min="100"
+              max="2000"
+              step="50"
+              v-model="meter_price_less_than"
+            ></range-slider>
+            <label class="text-black d-block">Max: $ {{meter_price_less_than}}</label>
           </div>
         </div>
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-          <label for="compra-o-venta">Acción</label>
-          <div class="select-wrap">
-            <span class="icon">
-              <span class="icon-keyboard_arrow_down"></span>
-            </span>
-            <select id="compra-o-venta" class="form-control rounded" v-model="sell_or_rent">
-              <option value="0">Venta</option>
-              <option value="1">Renta</option>
-            </select>
+        <div class="col-12 col-md-4 col-lg-3">
+          <div>
+            <p>
+              <label class="text-black">Superficie:</label>
+            </p>
+            <range-slider
+              class="slider"
+              min="1000"
+              max="100000"
+              step="100"
+              v-model="surface_area_more_than"
+            ></range-slider>
+            <label class="text-black d-block">Min: {{surface_area_more_than}} m2</label>
+          </div>
+          <div>
+            <range-slider
+              class="slider"
+              min="10000"
+              max="100000"
+              step="1000"
+              v-model="surface_area_less_than"
+            ></range-slider>
+            <label class="text-black d-block">Max: {{surface_area_less_than}} m2</label>
           </div>
         </div>
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-          <range-slider
-            class="slider"
-            min="100"
-            max="2000"
-            step="50"
-            v-model="meter_price_less_than"
-          ></range-slider>
-          <label class="text-black d-block">Max: $ {{meter_price_less_than}}</label>
-        </div>
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3">
-          <range-slider
-            class="slider"
-            min="10000"
-            max="100000"
-            step="1000"
-            v-model="surface_area_less_than"
-          ></range-slider>
-          <label class="text-black d-block">Max: {{surface_area_less_than}} m2</label>
-        </div>
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3 mt-3">
-          <label for="ordenar-por">Orden</label>
-          <div class="select-wrap">
-            <span class="icon">
-              <span class="icon-keyboard_arrow_down"></span>
-            </span>
-            <select id="ordenar-por" class="form-control rounded" v-model="orderBy_order">
-              <option value="ASC">Ascendente</option>
-              <option value="DESC">Descendente</option>
-            </select>
+        <div class="col-12 col-md-4 col-lg-3">
+          <div>
+            <label for="ordenar-por">Orden</label>
+            <div class="select-wrap">
+              <span class="icon">
+                <span class="icon-keyboard_arrow_down"></span>
+              </span>
+              <select id="ordenar-por" class="form-control rounded" v-model="orderBy_order">
+                <option value="ASC">Ascendente</option>
+                <option value="DESC">Descendente</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label>Ordenar por</label>
+            <div class="select-wrap">
+              <span class="icon">
+                <span class="icon-keyboard_arrow_down"></span>
+              </span>
+              <select class="form-control rounded" v-model="orderBy_attribute">
+                <option value="name">Nombre</option>
+                <option value="seller_price">Precio</option>
+                <option value="surface_area">Área</option>
+                <option value="created_at">Fecha</option>
+              </select>
+            </div>
           </div>
         </div>
-        <div class="col-lg-12 mb-4 mb-xl-0 col-xl-3 mt-3">
-          <label>Ordenar por</label>
-          <div class="select-wrap">
-            <span class="icon">
-              <span class="icon-keyboard_arrow_down"></span>
-            </span>
-            <select class="form-control rounded" v-model="orderBy_attribute">
-              <option value="name">Nombre</option>
-              <option value="seller_price">Precio</option>
-              <option value="surface_area">Área</option>
-              <option value="created_at">Fecha</option>
-            </select>
+        <div class="col-12 col-md-4 col-lg-3">
+          <div>
+            <label for="tipo-propiedad">Tipo</label>
+            <div class="select-wrap">
+              <span class="icon">
+                <span class="icon-keyboard_arrow_down"></span>
+              </span>
+              <select id="tipo-propiedad" class="form-control rounded" v-model="estate_type">
+                <option value="1">Terreno</option>
+                <option value="2">Casa</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="compra-o-venta">Acción</label>
+            <div class="select-wrap">
+              <span class="icon">
+                <span class="icon-keyboard_arrow_down"></span>
+              </span>
+              <select id="compra-o-venta" class="form-control rounded" v-model="sell_or_rent">
+                <option value="0">Venta</option>
+                <option value="1">Renta</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -104,6 +113,12 @@
   </div>
 </div>
 </template>
+
+<style>
+  #filters-component {
+    background: rgba(233,248,223);
+  }
+</style>
 
 <script>
 import RangeSlider from 'vue-range-slider'
