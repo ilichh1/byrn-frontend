@@ -76,7 +76,7 @@ svg#byrn-loader {
 <script>
 import { mapGetters } from 'vuex'
 import { getters as mainGetters } from '@/store'
-import { setTimeout } from 'timers';
+import { setTimeout } from 'timers'
 
 export default {
   name: 'byrn-loader',
@@ -84,10 +84,10 @@ export default {
     isModalVisible: false,
     isModalHidden: true
   }),
-  mounted() {
+  mounted () {
     window.addEventListener('transitionend', this.onModalTransitionEnd)
   },
-  destroyed() {
+  destroyed () {
     window.removeEventListener('transitionend', this.onModalTransitionEnd)
   },
   computed: {
@@ -96,21 +96,21 @@ export default {
     })
   },
   watch: {
-    modalState(oldValue, newValue) {
+    modalState (oldValue, newValue) {
       newValue ? this.onModalShow() : this.onModalHide()
     }
   },
   methods: {
-    onModalHide() {
+    onModalHide () {
       this.isModalVisible = false
       window.document.body.classList.remove('no-overflow')
     },
-    onModalShow() {
+    onModalShow () {
       this.isModalHidden = false
       setTimeout(() => this.isModalVisible = true, 90)
       window.document.body.classList.add('no-overflow')
     },
-    onModalTransitionEnd(event) {
+    onModalTransitionEnd (event) {
       const { target } = event
       if (target !== this.$refs.modalLoader || this.isModalVisible) { return }
       this.isModalHidden = true

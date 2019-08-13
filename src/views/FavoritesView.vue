@@ -44,7 +44,7 @@ export default {
   data: () => ({
     favorites: []
   }),
-  mounted() {
+  mounted () {
     this.getFavorites()
       .then(res => {
         this.favorites = res

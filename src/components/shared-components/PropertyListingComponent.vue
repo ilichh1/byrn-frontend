@@ -37,7 +37,7 @@ import {
 export default {
   name: 'property-listing-component',
   methods: {
-    toggleFavorite() {
+    toggleFavorite () {
       if (this.isFavorite(this.estate.id)) {
         this.deleteFavorite(this.estate.id)
         return

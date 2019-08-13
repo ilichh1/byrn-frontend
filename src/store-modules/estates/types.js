@@ -6,7 +6,7 @@ export const actions = {
 
 export const mutations = {
   addFavorite: 'addFavorite',
-  removeFavorite: 'removeFavorite',
+  removeFavorite: 'removeFavorite'
 }
 
 export const getters = {

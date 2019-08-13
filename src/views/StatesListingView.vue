@@ -65,8 +65,8 @@
 
 <script>
 import endpoints from '../endpoints'
-import { estateMapFunction } from '@/utils'
-import { toQueryParam } from '@/utils'
+import { estateMapFunction, toQueryParam } from '@/utils'
+
 import FiltersComponent from '@/components/shared-components/FiltersComponent'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env

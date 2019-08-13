@@ -7,7 +7,6 @@ import { initialState as authInitialState } from '@/store-modules/auth'
 import auth from '@/store-modules/auth'
 import estates from '@/store-modules/estates'
 
-
 Vue.use(Vuex)
 
 const initialState = () => ({

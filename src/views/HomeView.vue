@@ -19,9 +19,9 @@
           </div>
         </div>
       </div>
-      <div style=" 
-   
-   ;"> 
+      <div style="
+
+   ;">
       <img src="images/vectores.svg"  style="position: absolute;
       width: 100%;
       height: auto;
@@ -136,7 +136,6 @@
         </div>
       </div>
     </div>
-
 
   </div>
 </template>
