@@ -1,5 +1,5 @@
 <template>
-<div id="filters-component" class="container mb-4 px-3 py-4 border border-radius">
+<div id="filters-component" class="container mb-4 px-3 py-4 rounded-lg">
   <h4>Filtros</h4>
   <div class="form-search-wrap mb-3" data-aos="fade-up" data-aos-delay="200">
     <form>
