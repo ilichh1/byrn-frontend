@@ -9,7 +9,7 @@ import axios from 'axios'
 import { estateMapFunction } from '@/utils'
 
 export const initialState = () => ({
-  favorites: [12]
+  favorites: []
 })
 
 const mutations = {
