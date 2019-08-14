@@ -3,7 +3,7 @@
   <h4>Filtros</h4>
   <div class="form-search-wrap mb-3" data-aos="fade-up" data-aos-delay="200">
     <form>
-      <div class="row align-items-center">
+      <div class="row align-items-center justify-content-center text-center">
         <div class="col-12 col-md-4 col-lg-3">
           <div>
             <p>
@@ -13,8 +13,9 @@
               class="form-control-rounded slider"
               min="100"
               max="5000"
-              step="50"
+              step="10"
               v-model="meter_price_more_than"
+              style="width:250px"
             ></range-slider>
             <label class="text-black d-block">Min: $ {{meter_price_more_than}}</label>
           </div>
@@ -23,8 +24,9 @@
               class="slider"
               min="100"
               max="2000"
-              step="50"
+              step="10"
               v-model="meter_price_less_than"
+                style="width:250px"
             ></range-slider>
             <label class="text-black d-block">Max: $ {{meter_price_less_than}}</label>
           </div>
@@ -38,8 +40,9 @@
               class="slider"
               min="1000"
               max="100000"
-              step="100"
+              step="10"
               v-model="surface_area_more_than"
+                style="width:250px"
             ></range-slider>
             <label class="text-black d-block">Min: {{surface_area_more_than}} m2</label>
           </div>
@@ -48,8 +51,9 @@
               class="slider"
               min="10000"
               max="100000"
-              step="1000"
+              step="10"
               v-model="surface_area_less_than"
+                style="width:250px"
             ></range-slider>
             <label class="text-black d-block">Max: {{surface_area_less_than}} m2</label>
           </div>
