@@ -107,7 +107,7 @@ export default {
     },
     onModalShow () {
       this.isModalHidden = false
-      setTimeout(() => this.isModalVisible = true, 90)
+      this.isModalVisible = true
       window.document.body.classList.add('no-overflow')
     },
     onModalTransitionEnd (event) {

@@ -21,11 +21,12 @@
           </div>
           <div v-if="favorites.length !== 0" class="col-12">
             <div class="row">
-              <PropertyListingComponent
-                class="col-12 col-md-6 col-lg-3"
+              <div
                 v-for="e in favorites"
                 :key="`favorite-${e.id}`"
-                :estate="e"/>
+                class="col-12 col-md-6 col-lg-3 px-2">
+                <PropertyListingComponent :estate="e"/>
+              </div>
             </div>
           </div>
         </div>

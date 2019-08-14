@@ -29,6 +29,30 @@ export const axiosInstance = axios.create({
     'Application-Name': 'BYRN'
   }
 })
+const toggleLoader = (show) => {
+  store.commit('setLoaderState', !show)
+}
+const requestLoaderInterceptor = axiosInstance.interceptors.request.use((request) => {
+  toggleLoader(true)
+  if (store.getters.isUserLoggedIn) {
+    request.headers = {
+      ...request.headers,
+      'Authorization' : `Bearer ${store.state.auth.token}`
+    }
+  }
+  return request
+}, (error) => {
+  toggleLoader(false)
+  return Promise.reject(error)
+})
+
+const responseLoaderInterceptor = axiosInstance.interceptors.response.use((response) => {
+  toggleLoader(false)
+  return response
+}, (error) => {
+  toggleLoader(false)
+  return Promise.reject(error)
+})
 
 Vue.use(HighchartsVue)
 Vue.use(VueAxios, axiosInstance)

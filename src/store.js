@@ -6,6 +6,7 @@ import VuexPersistence from 'vuex-persist'
 import { initialState as authInitialState } from '@/store-modules/auth'
 import auth from '@/store-modules/auth'
 import estates from '@/store-modules/estates'
+import users from '@/store-modules/users'
 
 Vue.use(Vuex)
 
@@ -38,6 +39,7 @@ export const store = new Vuex.Store({
     }),
     [actions.changeLoaderState]: ({ commit }, loaderState) => new Promise((resolve) => {
       commit(actions.setLoaderState, loaderState)
+      resolve()
     })
   },
   getters: {
@@ -56,7 +58,8 @@ export const store = new Vuex.Store({
   },
   modules: {
     auth,
-    estates
+    estates,
+    users
   },
   plugins: [new VuexPersistence().plugin]
 })

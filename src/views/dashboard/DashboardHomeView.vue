@@ -4,7 +4,7 @@
       <h1 class="text-white">Administración</h1>
       <hr>
       <section class="estadisticas pt-2">
-        <div class="charts-container">
+        <div class="charts-container mb-4">
           <div class="row">
             <div class="col-md-4">
               <div class="pb-4 pb-md-0">
@@ -23,9 +23,13 @@
             </div>
           </div>
         </div>
+        <h4>Usuarios</h4>
+        <div class="table-container">
+          <ByrnTable id="users-table"/>
+        </div>
       </section>
     </div>
-    <div class="router-container pt-5">
+    <div class="router-container container pt-5">
       <router-view></router-view>
     </div>
   </section>
@@ -36,7 +40,7 @@
   background: url(https://newlondonrealestateinc.com/wp-content/uploads/2016/01/Closing-Background-2.jpg);
   background-color: rgb(233,248,223);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 550px;
   background-position: top right;
   padding-bottom: 1em;
   .admin-header {
@@ -46,10 +50,20 @@
   .router-container {
     background: rgb(233,248,223);
   }
+
+  .table-container {
+    overflow-x: auto;
+    #users-table {
+      min-width: 512px;
+    }
+  }
 }
 </style>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+import { actions as usersActions } from '@/store-modules/users/types'
+import ByrnTable from '@/components/shared-components/TableComponent'
 import { Chart } from 'highcharts-vue'
 
 const pieChartOptions = {
@@ -449,8 +463,18 @@ export default {
       lineChartOptions
     }
   },
+  mounted () {
+    this.fetchUsers()
+      .then(() => console.log('FETECH USERS?'))
+  },
+  methods: {
+    ...mapActions({
+      fetchUsers: usersActions.fetchAllUsers
+    })
+  },
   components: {
-    HighCharts: Chart
+    HighCharts: Chart,
+    ByrnTable
   }
 }
 </script>

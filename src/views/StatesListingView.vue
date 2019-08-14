@@ -1,6 +1,7 @@
 <template>
   <div class="site-wrap">
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/summer-grass.jpg);" data-stellar-background-ratio="0.5">
+    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/summer-grass.jpg);"
+      data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-10 mt-5" data-aos="fade-up" data-aos-delay="400">
@@ -21,30 +22,30 @@
     <div class="site-section">
       <div class="container">
         <div class="row">
-          <div class="col-12">
-            <FiltersComponent @filtersChanged="onFiltersChanged($event)"></FiltersComponent>
+          <div class="col-12 d-flex align-items-center justify-content-end text-right">
+            <span class="px-3" style="font-size: 1.5rem">Filtros</span>
+            <byrn-switch
+              v-model="showFilters"
+              @input="fetchEstates()">
+            </byrn-switch>
+          </div>
+          <div class="col-12 py-2 mb-2">
+            <FiltersComponent v-if="showFilters" @filtersChanged="onFiltersChanged($event)"></FiltersComponent>
           </div>
           <div class="col-lg-12">
             <h3 class="my-3">Listado</h3>
             <hr>
             <div class="row">
-              <div v-for="(element, index) in estates" :key="`${element.name}-${index}`" class="col-12 col-md-6 col-lg-4">
+              <div v-for="(element, index) in estates" :key="`${element.name}-${index}`"
+                class="col-12 col-md-6 col-lg-4">
                 <state-component :estate="element"></state-component>
               </div>
             </div>
             <div class="pagination">
-              <button
-                @click="moveTo(--current_page)"
-                class="cursor-pointer"
-                :class="{ 'no-click': !pagination.prev }"
-              >
+              <button @click="moveTo(--current_page)" class="cursor-pointer" :class="{ 'no-click': !pagination.prev }">
                 Anterior
               </button>
-              <button
-                @click="moveTo(++current_page)"
-                class="cursor-pointer"
-                :class="{ 'no-click': !pagination.next }"
-              >
+              <button @click="moveTo(++current_page)" class="cursor-pointer" :class="{ 'no-click': !pagination.next }">
                 Siguiente
               </button>
             </div>
@@ -66,7 +67,7 @@
 <script>
 import endpoints from '../endpoints'
 import { estateMapFunction, toQueryParam } from '@/utils'
-
+import ByrnSwitch from '@/components/shared-components/ByrnSwitchComponent'
 import FiltersComponent from '@/components/shared-components/FiltersComponent'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
@@ -75,6 +76,7 @@ export default {
   name: 'states-listing-component',
   data () {
     return {
+      showFilters: false,
       url: null,
       current_page: 1,
       filters: {
@@ -90,6 +92,9 @@ export default {
   created () {
     const { estates } = endpoints
     this.url = `${BASE_URL}/${estates}`
+  },
+  mounted() {
+    this.fetchEstates()
   },
   methods: {
     moveTo (page) {
@@ -119,12 +124,16 @@ export default {
   },
   computed: {
     currentUrl () {
-      const { url, filters } = this
+      let { url, filters, showFilters } = this
+      if (!showFilters) {
+        filters = { page: filters.page }
+      }
       const queryParam = toQueryParam(filters)
       return `${url}?${queryParam}`
     }
   },
   components: {
+    'byrn-switch': ByrnSwitch,
     FiltersComponent,
     'state-component': PropertyListingComponent
   }
