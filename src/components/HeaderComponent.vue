@@ -29,7 +29,7 @@
                   Inicio
                 </router-link>
               </li>
-              <li class="border-right pr-4">
+              <li>
                 <router-link to="/states">
                   Propiedades
                 </router-link>

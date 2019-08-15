@@ -7,7 +7,7 @@ import Home from '@/views/HomeView.vue'
 Vue.use(Router)
 
 export default new Router({
-  // mode: 'history', // TODO: Handle the file redirection on the server
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {

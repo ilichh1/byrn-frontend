@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Byrn Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #centered-marker {
+        position: absolute;
+        z-index: 1000;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="hidden" name="map-center" value="20.623005,-103.069012">
+    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+    <span id="centered-marker">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 365 560" enable-background="new 0 0 365 560">
+        <g>
+          <path fill="#289976" d="M182.9,551.7c0,0.1,0.2,0.3,0.2,0.3S358.3,283,358.3,194.6c0-130.1-88.8-186.7-175.4-186.9
+          C96.3,7.9,7.5,64.5,7.5,194.6c0,88.4,175.3,357.4,175.3,357.4S182.9,551.7,182.9,551.7z M122.2,187.2c0-33.6,27.2-60.8,60.8-60.8
+          c33.6,0,60.8,27.2,60.8,60.8S216.5,248,182.9,248C149.4,248,122.2,220.8,122.2,187.2z"/>
+        </g>
+      </svg>
+    </span>
+    <div id="map"></div>
+    <script>
+      window.byrnMapInput = document.querySelector('input[name="map-center"]');
+      function byrnInit(map) {
+        map.addListener('center_changed', function() {
+          var mapCenter = map.getCenter();
+          window.byrnMapInput.value = mapCenter.lat() + "," + mapCenter.lng();
+        });
+      }
+      function initMap() {
+        window.byrnMap = new google.maps.Map(document.getElementById('map'), {
+          center: {
+            lat: 20.623005,
+            lng: -103.069012
+          },
+          zoom: 16,
+          zoomControl: true,
+          mapTypeControl: false,
+          scaleControl: false,
+          streetViewControl: false,
+          rotateControl: false,
+          fullscreenControl: false
+        });
+        byrnInit(window.byrnMap);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvliDTuIXcG0x9NQtrEJahaZ3is15mMRc&callback=initMap&libraries=places"
+    async defer></script>
+  </body>
+</html>
