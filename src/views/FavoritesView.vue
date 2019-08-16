@@ -17,7 +17,10 @@
         <hr>
         <div class="row">
           <div v-if="favorites.length === 0" class="col-12 text-center">
-            <h4>No tienes ningún favorito =(</h4>
+            <h4>No tienes ningún favorito</h4>
+            <font-awesome-icon icon="frown" class="animated infinite  pulse fast " style="font-size: 100px" />
+                  
+                  
           </div>
           <div v-if="favorites.length !== 0" class="col-12">
             <div class="row">
