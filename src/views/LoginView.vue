@@ -83,14 +83,11 @@ export default {
           const { user, token } = data
           this.$store.dispatch(authActions.doLogin, { user, token })
             .then(() => {
-            console.log(data.status);
+            
               this.$router.replace('/dashboard')
 
             })
-        }),
-        (err)=>{
-          console.log(data.status);
-        }
+        })
     }
   }
 }

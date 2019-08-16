@@ -16,11 +16,12 @@
         <div class="col-6 col-xl-2">
           <router-link to="/">
             <h1 class="mb-0 site-logo">
-              <img src="/images/BYRN-LOGO.png" width="auto" height="84" 
+              <img id="logo" class="animated  flipInX faster " src="/images/BYRN-LOGO.png" width="auto" height="84" 
                 style="-webkit-filter:contrast(0%) brightness(0%);">
             </h1>
           </router-link>
         </div>
+        
         <div class="col-12 col-md-10 d-none d-xl-block">
           <nav class="site-navigation position-relative text-right" role="navigation">
 
@@ -103,3 +104,10 @@ export default {
   }
 }
 </script>
+<style>
+#logo{
+ -webkit-animation-duration: 10s;
+  -webkit-animation-delay: 1s;
+}
+</style>
+
