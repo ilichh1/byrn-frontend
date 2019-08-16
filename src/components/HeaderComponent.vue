@@ -26,24 +26,24 @@
           <nav class="site-navigation position-relative text-right" role="navigation">
 
             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-              <li class="active">
+              <li class="active hvr-float-shadow">
                 <router-link to="/">
                   Inicio
                 </router-link>
               </li>
-              <li class="border-right pr-4">
+              <li class="border-right pr-4 hvr-float-shadow">
                 <router-link to="/states">
                   Propiedades
                 </router-link>
               </li>
-              <li v-if="!isUserLoggedIn">
+              <li class="hvr-float-shadow" v-if="!isUserLoggedIn ">
                 <router-link to="/favorites">
                   Favoritos
                 </router-link>
               </li>
               <li v-if="!isUserLoggedIn">
                 <router-link to="/login" class="cta">
-                  <span class="bg-primary text-white rounded">Iniciar Sesion</span>
+                  <span class="bg-primary text-white rounded hvr-float-shadow">Iniciar Sesion</span>
                 </router-link>
               </li>
               <li v-if="isUserLoggedIn" class="has-children px-4">
