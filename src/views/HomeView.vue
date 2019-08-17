@@ -41,7 +41,7 @@
             <h2 class="font-weight-light text-primary ">¿Quiénes somos?</h2>
              </div>
             <blockquote class="pt-5">
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p>&ldquo;Empresa dedicada a la venta y renta de propiedades, siempre en busca de nuevas adquisiciones para brindar mejores oportunidades de forma accesible al mejor precio.&rdquo;</p>
               </blockquote>
 
               <div class="col-12 col-lg-4 pt-5">
@@ -49,7 +49,7 @@
 
                 <h1 class="h3 mb-1 text-black pt-5" >Misión</h1>
             <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p>&ldquo;Brindar un servicio integral, de  calidad y de confianza como resultado de una preparación  y actualización continua, priorizando un asesoramiento honesto de acuerdo a las necesidades de cada cliente.&rdquo;</p>
               </blockquote>
               </div>
 
@@ -57,27 +57,26 @@
                    <font-awesome-icon icon="cogs" style="font-size: 150px" />
                   <h1 class="h3 mb-1 text-black pt-5">Visión</h1>
             <blockquote>
-                <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi minima fuga beatae illum eligendi incidunt consequatur. Amet dolores excepturi earum unde iusto.&rdquo;</p>
+                <p>&ldquo;Ser una empresa que se destaque por la satisfacción de sus clientes, caracterizándonos por un trato amable y profesional, proporcionando siempre productos de la mas alta calidad.&rdquo;</p>
               </blockquote>
               </div>
 
                <div class="col-12 col-lg-4 pt-5">
                    <font-awesome-icon icon="code-branch" style="font-size: 150px" />
-                  <h1 class="h3 mb-1 text-black pt-5">Objetivos</h1>
+                  <h1 class="h3 mb-1 text-black pt-5">Valores</h1>
             <blockquote>
                 <p>
 
-                ipsum dolor sit amet
+                Trabajo en equipo
                 <br>
-                Consectetur adipiscing elit
+                Conducta ética
                 <br>
-                Integer molestie lorem at massa
+                Orientación al cliente
                 <br>
-                Facilisis in pretium nisl aliquet
+                Innovación
                 <br>
-                Nulla volutpat aliquam velit
-                <br>
-                 Nulla volutpat aliquam velit
+                Transparencia
+             
 
             </p>
                 </blockquote>

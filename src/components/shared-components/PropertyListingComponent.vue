@@ -1,8 +1,8 @@
 <template>
   <div class="d-block d-md-flex listing vertical">
-    <a
+    <a> <router-link :to="`/details/${estate.id}`"
       :style="`background-image: url('${estate.image}')`"
-      class="img d-block"></a>
+      class="img d-block"></router-link></a>
     <div class="lh-content">
       <span class="category">{{ estate.type }}</span>
       <span @click="toggleFavorite()" class="bookmark" :class="{ 'is-favorite': isFavorite(estate.id) }">

@@ -37,7 +37,7 @@
 
 <style lang="scss">
 #user-section {
-  background: url(https://newlondonrealestateinc.com/wp-content/uploads/2016/01/Closing-Background-2.jpg);
+  background:linear-gradient(180deg,rgb(40,153,118),#e9f8df);
   background-color: rgb(233,248,223);
   background-repeat: no-repeat;
   background-size: 100% 550px;
@@ -72,14 +72,15 @@ const pieChartOptions = {
     backgroundColor: {
       linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
       stops: [
-        [0, 'rgb(143,198,94)'],
-        [1, 'rgb(155,2016,108)']
+        [0, 'rgba(0,0,0,0)'],
+        [1, 'rgba(0,0,0,0)']
       ]
     },
     plotBorderColor: '#606063'
   },
   title: {
-    text: 'Propiedades registradas este mes.'
+    text: '<h1 style="font-size:25px; color: white">Propiedades</h1>'
+    
   },
   /*
   subtitle: {
@@ -342,13 +343,13 @@ const barChartOptions = {
     backgroundColor: {
       linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
       stops: [
-        [0, 'rgb(143,198,94)'],
-        [1, 'rgb(155,2016,108)']
+        [0, 'rgba(0,0,0,0)'],
+        [1, 'rgba(0,0,0,0)']
       ]
     }
   },
   title: {
-    text: 'Propiedades vendidas y rentadas este mes.'
+    text: '<style="font-size:25px; color: white">Propiedades vendidas y rentadas este mes'
   },
   xAxis: {
     categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
@@ -396,13 +397,13 @@ const lineChartOptions = {
     backgroundColor: {
       linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
       stops: [
-        [0, 'rgb(143,198,94)'],
-        [1, 'rgb(155,2016,108)']
+        [0, 'rgba(0,0,0,0)'],
+        [1, 'rgba(0,0,0,0)']
       ]
     }
   },
   title: {
-    text: 'Usuarios registrados este mes.'
+    text:  '<h1 style="font-size:25px; color: white">Usuarios registrados este mes </h1><br>'
   },
   yAxis: {
     title: {

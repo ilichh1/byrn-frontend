@@ -80,7 +80,7 @@
           </form>
           <h3 class="text-black mb-0 mt-4">Agenda tu cita</h3>
           <date-picker
-            class="col-md-12 mt-2"
+            class="col-10 mt-2"
             v-model="datetime"
             @change="onDateTimeChange()"
             lang="es"
