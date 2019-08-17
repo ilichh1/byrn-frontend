@@ -1,6 +1,6 @@
 <template>
   <header>
-   
+
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -16,16 +16,17 @@
         <div class="col-6 col-xl-2">
           <router-link to="/">
             <h1 class="mb-0 site-logo">
-              <img src="/images/BYRN-LOGO.png" width="auto" height="84" 
+              <img id="logo" class="animated  flipInX faster " src="/images/BYRN-LOGO.png" width="auto" height="84"
                 style="-webkit-filter:contrast(0%) brightness(0%);">
             </h1>
           </router-link>
         </div>
+
         <div class="col-12 col-md-10 d-none d-xl-block">
           <nav class="site-navigation position-relative text-right" role="navigation">
 
             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-              <li class="active">
+              <li class="active hvr-float-shadow">
                 <router-link to="/">
                   Inicio
                 </router-link>
@@ -35,14 +36,14 @@
                   Propiedades
                 </router-link>
               </li>
-              <li v-if="!isUserLoggedIn">
+              <li class="hvr-float-shadow" v-if="!isUserLoggedIn ">
                 <router-link to="/favorites">
                   Favoritos
                 </router-link>
               </li>
               <li v-if="!isUserLoggedIn">
                 <router-link to="/login" class="cta">
-                  <span class="bg-primary text-white rounded">Iniciar Sesion</span>
+                  <span class="bg-primary text-white rounded hvr-float-shadow">Iniciar Sesion</span>
                 </router-link>
               </li>
               <li v-if="isUserLoggedIn" class="has-children px-4">
@@ -103,3 +104,9 @@ export default {
   }
 }
 </script>
+<style>
+#logo{
+ -webkit-animation-duration: 10s;
+  -webkit-animation-delay: 1s;
+}
+</style>

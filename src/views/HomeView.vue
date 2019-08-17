@@ -12,8 +12,8 @@
           <div class="col-md-12 ">
              <div class="row justify-content-center mb-4 ">
               <div class="col-md-8 text-center ">
-                <h1  data-aos="fade-up">Venta/Renta de Propiedades</h1>
-                <p   data-aos="fade-up" data-aos-delay="100">Bienes y raíces Nuño</p>
+                <h1  data-aos="fade-up" class="animated  zoomIn fast ">Venta/Renta de Propiedades</h1>
+                <p   data-aos="fade-up" class="animated  zoomIn slow " data-aos-delay="100">Bienes y raíces Nuño</p>
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
       <div style="
 
    ;">
-      <img src="images/vectores.svg"  style="position: absolute;
+      <img src="images/vectores.svg" class="animated  fadeInUpBig slow  " style="position: absolute;
       width: 100%;
       height: auto;
       left: 0px;
@@ -44,27 +44,33 @@
                 <p>&ldquo;Empresa dedicada a la venta y renta de propiedades, siempre en busca de nuevas adquisiciones para brindar mejores oportunidades de forma accesible al mejor precio.&rdquo;</p>
               </blockquote>
 
-              <div class="col-12 col-lg-4 pt-5">
-           <font-awesome-icon icon="chart-bar" style="font-size: 150px" />
+              <div class="col-12 col-lg-4 pt-5 ">
+                <label href="" class="hvr-icon-pulse-shrink">
+  <font-awesome-icon icon="chart-bar" class="hvr-icon"   style="font-size: 150px" />
+                </label>
 
-                <h1 class="h3 mb-1 text-black pt-5" >Misión</h1>
-            <blockquote>
+                <h1 class="h3 mb-1 text-black pt-5  " >Misión</h1>
+            <blockquote class="hvr-grow">
                 <p>&ldquo;Brindar un servicio integral, de  calidad y de confianza como resultado de una preparación  y actualización continua, priorizando un asesoramiento honesto de acuerdo a las necesidades de cada cliente.&rdquo;</p>
               </blockquote>
               </div>
 
                <div class="col-12 col-lg-4 pt-5">
-                   <font-awesome-icon icon="cogs" style="font-size: 150px" />
-                  <h1 class="h3 mb-1 text-black pt-5">Visión</h1>
-            <blockquote>
+                 <label href="" class="hvr-icon-spin">
+                  <font-awesome-icon icon="cogs" class="hvr-icon" style="font-size: 150px" />
+                 </label>
+                  <h1 class="h3 mb-1 text-black pt-3">Visión</h1>
+            <blockquote class="hvr-grow">
                 <p>&ldquo;Ser una empresa que se destaque por la satisfacción de sus clientes, caracterizándonos por un trato amable y profesional, proporcionando siempre productos de la mas alta calidad.&rdquo;</p>
               </blockquote>
               </div>
 
                <div class="col-12 col-lg-4 pt-5">
-                   <font-awesome-icon icon="code-branch" style="font-size: 150px" />
-                  <h1 class="h3 mb-1 text-black pt-5">Valores</h1>
-            <blockquote>
+                  <label href="" class="hvr-icon-pulse-shrink">
+                   <font-awesome-icon icon="code-branch" class="hvr-icon " style="font-size: 150px" />
+                  </label>
+                  <h1 class="h3 mb-1 text-black pt-3">Valores</h1>
+            <blockquote class="hvr-grow">
                 <p>
 
                 Trabajo en equipo
@@ -76,7 +82,6 @@
                 Innovación
                 <br>
                 Transparencia
-             
 
             </p>
                 </blockquote>
@@ -140,6 +145,7 @@
 </template>
 
 <script>
+
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 
 const FEATURED_PROPERTIES = [
@@ -205,3 +211,6 @@ export default {
   }
 }
 </script>
+<style>
+
+</style>

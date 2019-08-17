@@ -80,7 +80,7 @@ const pieChartOptions = {
   },
   title: {
     text: '<h1 style="font-size:25px; color: white">Propiedades</h1>'
-    
+
   },
   /*
   subtitle: {
@@ -403,7 +403,7 @@ const lineChartOptions = {
     }
   },
   title: {
-    text:  '<h1 style="font-size:25px; color: white">Usuarios registrados este mes </h1><br>'
+    text: '<h1 style="font-size:25px; color: white">Usuarios registrados este mes </h1><br>'
   },
   yAxis: {
     title: {

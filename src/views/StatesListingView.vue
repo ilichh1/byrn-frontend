@@ -93,7 +93,7 @@ export default {
     const { estates } = endpoints
     this.url = `${BASE_URL}/${estates}`
   },
-  mounted() {
+  mounted () {
     this.fetchEstates()
   },
   methods: {
