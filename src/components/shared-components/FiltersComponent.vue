@@ -4,7 +4,7 @@
   <div class="form-search-wrap mb-3" data-aos="fade-up" data-aos-delay="200">
     <form>
       <div class="row align-items-center justify-content-center text-center">
-        <div class="col-12 col-md-4 col-lg-3">
+        <div class="col-12 col-md-12 col-lg-3">
           <div>
             <p>
               <label class="form-control-rounded text-black">Precio mt2:</label>
@@ -31,7 +31,7 @@
             <label class="text-black d-block">Max: $ {{meter_price_less_than}}</label>
           </div>
         </div>
-        <div class="col-12 col-md-4 col-lg-3">
+        <div class="col-12 col-md-12 col-lg-3">
           <div>
             <p>
               <label class="text-black">Superficie:</label>

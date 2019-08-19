@@ -352,13 +352,13 @@ const barChartOptions = {
     text: '<style="font-size:25px; color: white">Propiedades vendidas y rentadas este mes'
   },
   xAxis: {
-    categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+    categories: ['Casas', 'Departamentos', 'Bodegas', 'Locales', 'Terrenos']
   },
   yAxis: {
     allowDecimals: false,
     min: 0,
     title: {
-      text: 'Number of fruits'
+      text: 'Propiedades'
     }
   },
   tooltip: {
@@ -374,19 +374,19 @@ const barChartOptions = {
     }
   },
   series: [{
-    name: 'John',
+    name: 'Jacob',
     data: [5, 3, 4, 7, 2],
     stack: 'male'
   }, {
-    name: 'Joe',
+    name: 'Alan',
     data: [3, 4, 4, 2, 5],
     stack: 'male'
   }, {
-    name: 'Jane',
+    name: 'Ilich',
     data: [2, 5, 6, 2, 1],
     stack: 'female'
   }, {
-    name: 'Janet',
+    name: 'Samir',
     data: [3, 0, 4, 4, 3],
     stack: 'female'
   }]
@@ -407,7 +407,7 @@ const lineChartOptions = {
   },
   yAxis: {
     title: {
-      text: 'Number of Employees'
+      text: 'Empleados'
     }
   },
   legend: {
