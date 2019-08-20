@@ -23,7 +23,7 @@
             <range-slider
               class="slider"
               min="100"
-              max="2000"
+              max="5000"
               step="10"
               v-model="meter_price_less_than"
                 style="width:250px"
@@ -94,8 +94,15 @@
                 <span class="icon-keyboard_arrow_down"></span>
               </span>
               <select id="tipo-propiedad" class="form-control rounded" v-model="estate_type">
-                <option value="1">Terreno</option>
-                <option value="2">Casa</option>
+                <option value="1">Terreno rústico.</option>
+                <option value="2">Terreno urbano.</option>
+                <option value="3">Casa habitación.</option>
+                <option value="4">Local comercial.</option>
+                <option value="5">Bodega.</option>
+                <option value="6">Departamento.</option>
+                <option value="7">Casa campestre.</option>
+                <option value="8">Acción de sociedad.</option>
+                <option value="-1">Todos</option>
               </select>
             </div>
           </div>
@@ -134,7 +141,7 @@ export default {
   data () {
     return {
       meter_price_more_than: 100,
-      meter_price_less_than: 2000,
+      meter_price_less_than: 5000,
       surface_area_more_than: 100,
       surface_area_less_than: 100000,
       estate_type: 1,

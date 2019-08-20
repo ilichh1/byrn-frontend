@@ -125,6 +125,10 @@ export default {
   computed: {
     currentUrl () {
       let { url, filters, showFilters } = this
+      delete filters.meter_price_more_than
+      delete filters.meter_price_less_than
+      delete filters.surface_area_more_than
+      delete filters.surface_area_less_than
       if (!showFilters) {
         filters = { page: filters.page }
       }
