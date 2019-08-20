@@ -23,6 +23,12 @@ const actions = {
 const getters = {
   [authGetters.isUserLoggedIn] ({ token }) {
     return !!token
+  },
+  [authGetters.getUser] ({ user }) {
+    return user;
+  },
+  [authGetters.userIsAdmin] ({ user }) {
+    return user.roles.map(r => r.id).includes(1)
   }
 }
 

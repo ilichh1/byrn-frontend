@@ -87,8 +87,9 @@ export default {
       name: '',
       last_name: '',
       email: '',
+      password: '',
       cellphone: '',
-      password: ''
+      address: 'CALLE ##, COLONIA, ESTADO, MUNICIPIO',
     }
   }),
   mounted () {
@@ -98,10 +99,7 @@ export default {
     onFormSubmit () {
       const { createUser } = this.endpoints
       const postBody = {
-        ...this.form,
-        'street': 'Guayabitos',
-        'outside_number': '184',
-        'neighborhood': 'Colonia'
+        ...this.form
       }
       const options = {
         method: 'POST',
@@ -111,7 +109,12 @@ export default {
       }
       this.$http(options)
         .then(res => {
-          console.log('RESPUESTA DE LA API: ', res)
+          if (res.status === 201) {
+            this.$router.replace('/login')
+          } else {
+            alert('No se pudo registrar al usuario, intente de nuevo.');
+            console.log(res);
+          }
         })
     }
   }

@@ -58,7 +58,7 @@ Vue.use(HighchartsVue)
 Vue.use(VueAxios, axiosInstance)
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyB-EQhrThzt8vt3LirSZHuRMkDJj6tbG7o'
+    key: 'AIzaSyAvliDTuIXcG0x9NQtrEJahaZ3is15mMRc'
   },
   /// / If you want to manually install components, e.g.
   /// / import {GmapMarker} from 'vue2-google-maps/src/components/marker'

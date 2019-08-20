@@ -9,5 +9,6 @@ export const mutations = {
 
 export const getters = {
   getUser: 'getUser',
-  isUserLoggedIn: 'isUserLoggedIn'
+  isUserLoggedIn: 'isUserLoggedIn',
+  userIsAdmin: 'userIsAdmin'
 }

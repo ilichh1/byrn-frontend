@@ -32,7 +32,7 @@
                     <div class="row form-group">
                       <div class="col-12">
                         <p class="text-black">
-                          Aún no tienes cuenta?
+                          ¿Aún no tienes cuenta? &emsp;
                           <router-link class="text-white" to="/register">Regístrate</router-link>
                         </p>
                       </div>
@@ -83,9 +83,15 @@ export default {
           const { user, token } = data
           this.$store.dispatch(authActions.doLogin, { user, token })
             .then(() => {
-              this.$router.replace('/dashboard')
+              const isAdmin = this.$store.getters.userIsAdmin
+              if (isAdmin) {
+                this.$router.replace('/dashboard')
+              } else {
+                this.$router.replace('/states')
+              }
             })
         })
+        .catch(() => alert('Credenciales incorrectas, por favor intente de nuevo.'))
     }
   }
 }

@@ -36,18 +36,13 @@
                   Propiedades
                 </router-link>
               </li>
-              <li class="hvr-grow" v-if="!isUserLoggedIn ">
-                <router-link to="/favorites">
-                  Favoritos
-                </router-link>
-              </li>
               <li v-if="!isUserLoggedIn">
                 <router-link to="/login" class="cta">
                   <span class="bg-primary text-white rounded hvr-grow">Iniciar Sesion</span>
                 </router-link>
               </li>
               <li v-if="isUserLoggedIn" class="has-children px-4">
-                <a href="#">Usuario</a>
+                <a href="#">{{ getUser.name }}</a>
                 <ul class="dropdown">
                   <li>
                     <router-link to="/editp">
@@ -59,7 +54,7 @@
                       Mis Favoritos
                     </router-link>
                   </li>
-                  <li>
+                  <li v-if="userIsAdmin">
                     <router-link to="/dashboard/estate">
                       Subir propiedad
                     </router-link>
@@ -90,7 +85,9 @@ export default {
   name: 'header-component',
   computed: {
     ...mapGetters([
-      authGetters.isUserLoggedIn
+      authGetters.isUserLoggedIn,
+      authGetters.userIsAdmin,
+      'getUser'
     ])
   },
   methods: {
@@ -105,7 +102,7 @@ export default {
 }
 </script>
 <style>
-#logo{
+#logo {
  -webkit-animation-duration: 10s;
   -webkit-animation-delay: 1s;
 }

@@ -51,9 +51,9 @@
         </div>
 
         <div class="col-md-4 p-3">
-          <h2 class="text-black">Contacta al anunciante</h2>
+          <h2 v-if="!isLoggedIn" class="text-black">Contacta al anunciante</h2>
 
-          <form class="p-2 mt-3" style="background: rgba(0,0,0, 0.1)">
+          <form v-if="!isLoggedIn" class="p-2 mt-3" style="background: rgba(0,0,0, 0.1)">
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="email">Correo</label>
@@ -78,22 +78,38 @@
               </div>
             </div>
           </form>
-          <h3 class="text-black mb-0 mt-4">Agenda tu cita</h3>
-          <date-picker
-            class="col-10 mt-2"
-            v-model="datetime"
-            @change="onDateTimeChange()"
-            lang="es"
-            type="datetime"
-            :time-picker-options="timePickerOptions"
-            format="[El día: ]YYYY-MM-DD [a las: ]HH:mm a"
-            width="500"
-            placeholder="Selecciona Fecha y Hora"
-            confirm
-          ></date-picker>
+          <div v-if="isLoggedIn" class="mt-4">
+            <h3 class="text-black mb-3">Agenda tu cita</h3>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Tipo de cita</label>
+              <select v-model="appointment.appoiment_type" class="form-control" id="exampleFormControlSelect1">
+                <option value="null" selected disabled>Seleccione...</option>
+                <option value="Compraventa">Compraventa</option>
+                <option value="Informacion">Informacion</option>
+                <option value="Recorrido">Recorrido</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location-appointment">Lugar de encuentro</label>
+              <input v-model="appointment.location" class="form-control" type="text" name="appointment-location" id="location-appointment" placeholder="Oficinas de BYNR">
+            </div>
+            <date-picker
+              class="col-10 mt-2"
+              v-model="datetime"
+              @change="onDateTimeChange()"
+              lang="es"
+              type="datetime"
+              :time-picker-options="timePickerOptions"
+              format="[El día: ]YYYY-MM-DD [a las: ]HH:mm a"
+              width="500"
+              placeholder="Selecciona Fecha y Hora"
+              confirm
+            ></date-picker>
 
-          <div class="d-flex justify-content-center">
-            <input type="submit" value="Agendar" class="mt-3 btn btn-primary py-2 px-4 text-white" />
+            <div class="d-flex justify-content-center">
+              <input @click.prevent="onSubmitDate()" type="submit" value="Agendar" class="mt-3 btn btn-primary py-2 px-4 text-white" />
+            </div>
           </div>
         </div>
       </div>
@@ -102,7 +118,8 @@
 </template>
 
 <script>
-// import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
+import { mapGetters } from 'vuex'
+import { getters as authGetters } from '@/store-modules/auth/types'
 import DatePicker from 'vue2-datepicker'
 import endpoints from '../endpoints'
 import ByrnImageCarousel from '@/components/shared-components/ImageCarousel.vue'
@@ -117,7 +134,9 @@ export default {
       },
       appointment: {
         date: '',
-        time: ''
+        time: '',
+        location: '',
+        appoiment_type: ''
       },
       form: {
         email: '',
@@ -140,21 +159,6 @@ export default {
     this.$http.get(`${BASE_URL}/${estates}/${id}`)
       .then(({ data: estate }) => {
         this.estate = estate
-        /*
-        return {
-          id: this.estate.id,
-          name: this.estate.name,
-          description: this.estate.description,
-          images: this.estate.images.map(o => o.url),
-          seller_price: this.estate.seller_price,
-          surface_area: this.estate.surface_area,
-          meter_price: this.estate.meter_price,
-          latitude: this.estate.latitude,
-          longitude: this.estate.longitude,
-          address: this.estate.address,
-          first_page_url: this.estate.first_page_url
-        }
-        */
       })
   },
   methods: {
@@ -202,9 +206,40 @@ export default {
           }
         })
       }
+    },
+    clearAppointmentFields() {
+      this.appointment.date = ''
+      this.appointment.time = ''
+      this.appointment.location = ''
+      this.appointment.appoiment_type = 'null'
+    },
+    onSubmitDate() {
+      const { id: customer_id } = this.currentUser
+      const { id: estate_id } = this.estate
+      const requestBody = {
+        ...this.appointment,
+        start_time: this.appointment.time,
+        customer_id,
+        estate_id
+      }
+      this.$http.post('/api/appoiments', requestBody)
+        .then(res => {
+          if(res.status === 201) {
+            alert('Su cita fue agendada con exito, espere confirmación. Gracias')
+            this.clearAppointmentFields()
+          } else {
+            console.log(res)
+            alert('Datos de la cita incorrectos, por favor intente de nuevo.')
+          }
+        })
+        .catch(() => alert('Datos de la cita incorrectos, por favor intente de nuevo.'))
     }
   },
   computed: {
+    ...mapGetters({
+      isLoggedIn: authGetters.isUserLoggedIn,
+      'currentUser': authGetters.getUser
+    }),
     estateImages () {
       try {
         return this.estate.images.map(o => o.url)
