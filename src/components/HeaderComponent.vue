@@ -38,7 +38,7 @@
               </li>
               <li v-if="!isUserLoggedIn">
                 <router-link to="/login" class="cta">
-                  <span class="bg-primary text-white rounded hvr-grow">Iniciar Sesion</span>
+                  <span class="bg-primary text-white rounded hvr-grow">Iniciar Sesión</span>
                 </router-link>
               </li>
               <li v-if="isUserLoggedIn" class="has-children px-4">

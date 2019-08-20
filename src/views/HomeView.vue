@@ -109,7 +109,7 @@
                 <p>Ezequiel Rodriguez</p>
               </figure>
               <blockquote>
-                <p>&ldquo;Increíble sitio, econtre mi propiedad ideal de una manera muy sencilla, lo recomiendo totalmente !&rdquo;</p>
+                <p>&ldquo;Increíble sitio, encontré mi propiedad ideal de una manera muy sencilla, lo recomiendo totalmente !&rdquo;</p>
               </blockquote>
             </div>
           </div>
@@ -120,7 +120,7 @@
                 <p>Karla Mora  </p>
               </figure>
               <blockquote>
-                <p>&ldquo;La atención que me dieron desde que agende mi cita es sorprendente, gracias a BYRN encontre la propiedad que se ajustaba a mis necesidades.&rdquo;</p>
+                <p>&ldquo;La atención que me dieron desde que agende mi cita es sorprendente, gracias a BYRN encontré la propiedad que se ajustaba a mis necesidades.&rdquo;</p>
               </blockquote>
             </div>
           </div>
@@ -132,7 +132,7 @@
                 <p>Abraham Sánchez</p>
               </figure>
               <blockquote>
-                <p>&ldquo;Simplemente Sorprendente, encontre el terreno perfecto para mis hectáreas de aguacate &rdquo;</p>
+                <p>&ldquo;Simplemente Sorprendente, encontré el terreno perfecto para mis hectáreas de aguacate &rdquo;</p>
               </blockquote>
             </div>
           </div>

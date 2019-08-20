@@ -9,7 +9,7 @@
             </div>
 
             <div class="col-md-4">
-              <h2 class="footer-heading text-white ">Enceuntranos en: </h2>
+              <h2 class="footer-heading text-white ">Encuéntranos en: </h2>
               <a href="https://www.facebook.com/Bienes-Y-Raices-N-105244424169853/" class="pl-0 pr-3 text-white"><span class="icon-facebook"></span></a>
               <a href="https://twitter.com/BinesByrn" class="pl-3 pr-3"><span class="icon-twitter text-white"></span></a>
               <a href="https://www.instagram.com/bienesbyrn/?hl=es-la" class="pl-3 pr-3 text-white"><span class="icon-instagram"></span></a>

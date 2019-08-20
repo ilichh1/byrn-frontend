@@ -48,7 +48,7 @@
             </div>
             <div class="row form-group">
               <div class="col-md-12">
-                <label class="text-black" for="phone-input">Telefono</label>
+                <label class="text-black" for="phone-input">Teléfono</label>
                 <input v-model="form.cellphone" type="text" id="phone-input" class="form-control" />
               </div>
             </div>
