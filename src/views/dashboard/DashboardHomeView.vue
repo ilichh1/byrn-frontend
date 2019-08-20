@@ -24,7 +24,7 @@
           </div>
         </div>
         <h4>Usuarios</h4>
-        <div class="table-container">
+        <div v-if="false" class="table-container">
           <ByrnTable id="users-table"/>
         </div>
       </section>
