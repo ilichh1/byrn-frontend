@@ -25,7 +25,7 @@ const getters = {
     return !!token
   },
   [authGetters.getUser] ({ user }) {
-    return user;
+    return user
   },
   [authGetters.userIsAdmin] ({ user }) {
     return user.roles.map(r => r.id).includes(1)

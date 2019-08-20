@@ -207,13 +207,13 @@ export default {
         })
       }
     },
-    clearAppointmentFields() {
+    clearAppointmentFields () {
       this.appointment.date = ''
       this.appointment.time = ''
       this.appointment.location = ''
       this.appointment.appoiment_type = 'null'
     },
-    onSubmitDate() {
+    onSubmitDate () {
       const { id: customer_id } = this.currentUser
       const { id: estate_id } = this.estate
       const requestBody = {
@@ -224,7 +224,7 @@ export default {
       }
       this.$http.post('/api/appoiments', requestBody)
         .then(res => {
-          if(res.status === 201) {
+          if (res.status === 201) {
             alert('Su cita fue agendada con exito, espere confirmación. Gracias')
             this.clearAppointmentFields()
           } else {

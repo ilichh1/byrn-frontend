@@ -89,7 +89,7 @@ export default {
       email: '',
       password: '',
       cellphone: '',
-      address: 'CALLE ##, COLONIA, ESTADO, MUNICIPIO',
+      address: 'CALLE ##, COLONIA, ESTADO, MUNICIPIO'
     }
   }),
   mounted () {
@@ -112,8 +112,8 @@ export default {
           if (res.status === 201) {
             this.$router.replace('/login')
           } else {
-            alert('No se pudo registrar al usuario, intente de nuevo.');
-            console.log(res);
+            alert('No se pudo registrar al usuario, intente de nuevo.')
+            console.log(res)
           }
         })
     }
