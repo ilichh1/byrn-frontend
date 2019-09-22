@@ -27,6 +27,10 @@
     </div>
 
     <div class="form-group col-sm-12">
+      <ImageChooser/>
+    </div>
+
+    <!--div class="form-group col-sm-12">
       <span v-if="estate.files.length === 0">Ninguna imagen seleccionada.</span>
       <div v-else>
         <span class="mb-2 d-block">
@@ -49,9 +53,9 @@
           </label>
         </div>
       </div>
-    </div>
+    </div-->
 
-    <div class="form-group col-sm-12">
+    <!--div class="form-group col-sm-12">
       <label
         @keyup.enter="onEnterKeyToAddImage"
         class="btn btn-primary d-block c-cursor"
@@ -65,7 +69,7 @@
         id="addImageInput"
         ref="addFileButton"
         @change="onEstateImageAdded">
-    </div>
+    </div-->
 
     <div class="col-sm-12">
       <div class="form-group form-check">
@@ -122,6 +126,80 @@ label[for="addImageInput"]:focus {
 </style>
 
 <script>
+import ImageChooser from '@/components/shared-components/ImageChooserComponent.vue'
+
+const MOCKUP_DATA = {
+  'id': 10,
+  'name': 'Propiedad888',
+  'image_id': '4',
+  'description': 'Esta bonita',
+  'owner_id': 1,
+  'estate_type': 1,
+  'business_type': 2,
+  'commision_or_advertising': 3,
+  'sell_or_rent': '0',
+  'ejidal_or_private': '0',
+  'surface_area': 400,
+  'seller_price': 4000000,
+  'seller_minimum_price': null,
+  'meter_price': 10000,
+  'front_meters': null,
+  'long_meters': null,
+  'has_underground_water': '0',
+  'agent_comments': null,
+  'latitude': '20.62388600',
+  'longitude': '-103.08852800',
+  'address': 'Indepencia 181 Centro 45430',
+  'city_id': 124,
+  'state_id': null,
+  'has_drinkable_water': '0',
+  'sewer_system': '0',
+  'public_light': '0',
+  'is_heritage': '0',
+  'is_needy': '0',
+  'bathrooms': null,
+  'parking_lots': null,
+  'floors': null,
+  'construction_area': null,
+  'bedrooms': null,
+  'status': '1',
+  'created_at': '2019-08-09 21:46:32',
+  'updated_at': '2019-08-09 21:46:33',
+  'full_address': 'Indepencia 181 Centro 45430, Ixtapa',
+  'visit': 1,
+  'images': [{
+    'id': 4,
+    'url': 'https://storage.googleapis.com/byrn-bucket/estate01/HdGeAxYagD7IqMZHJh02nLrDTVgDHbE7PGVS2DT2.jpeg',
+    'estate_id': 10,
+    'created_at': '2019-08-09 21:46:32',
+    'updated_at': '2019-08-09 21:46:32'
+  },
+  {
+    'id': 5,
+    'url': 'https://storage.googleapis.com/byrn-bucket/estate01/gD1sEyN0iNXDnXpQtRjpk80oElfZEjBNWtY3QPMY.jpeg',
+    'estate_id': 10,
+    'created_at': '2019-08-09 21:46:32',
+    'updated_at': '2019-08-09 21:46:32'
+  },
+  {
+    'id': 6,
+    'url': 'https://storage.googleapis.com/byrn-bucket/estate01/cFiGrjxu7xWnkYPeJF3XkY73wlgLozebS0sk6edg.jpeg',
+    'estate_id': 10,
+    'created_at': '2019-08-09 21:46:33',
+    'updated_at': '2019-08-09 21:46:33'
+  }
+  ],
+  'city': {
+    'id': 124,
+    'name': 'Ixtapa',
+    'state_id': 7,
+    'number': 44,
+    'created_at': '2019-08-05 18:54:34',
+    'updated_at': null
+  },
+  'state': null
+}
+
 const OWNERS = [
   {
     id: 1,
@@ -174,46 +252,9 @@ export default {
       this.estate.files.push(file)
       target.value = null
     }
+  },
+  components: {
+    ImageChooser
   }
 }
-
-// Estate properties
-/*
-name
-description
-owner_id
-images
-estate_type
-business_type
-commision_or_advertising
-sell_or_rent
-ejidal_or_private
-surface_area
-seller_price
-seller_minimum_price
-meter_price
-front_meters
-long_meters
-has_underground_water
-agent_comments
-latitude
-longitude
-has_drinkable_water
-sewer_system
-public_light
-is_heritage
-is_needy
-street
-outside_number
-interior_number
-neighborhood
-postalcode
-city_id
-state_id
-bathrooms
-parking_lots
-floors
-construction_area
-bedrooms
-*/
 </script>

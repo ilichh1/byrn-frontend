@@ -46,8 +46,25 @@ export default new Router({
         {
           path: 'estate',
           component: () => import(/* webpackChunkName: "listing" */ '@/views/dashboard/children/UploadEstateFormView.vue')
+        },
+        {
+          path: 'estates',
+          component: () => import(/* webpackChunkName: "estates-crud-main" */ '@/components/estates-crud/ContainerComponent.vue'),
+          children: [
+            {
+              path: '', // The default path is used for the listing component
+              component: () => import(/* webpackChunkName: "estates-listing" */ '@/components/estates-crud/EstatesListingComponent.vue')
+            },
+            {
+              path: 'edit',
+              component: () => import(/* webpackChunkName: "estates-edit" */ '@/components/estates-crud/EstatesEditComponent.vue')
+            },
+            {
+              path: 'new',
+              component: () => import(/* webpackChunkName: "estates-new" */ '@/components/estates-crud/EstatesCreateComponent.vue')
+            }
+          ]
         }
-
       ]
     },
     {
