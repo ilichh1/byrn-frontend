@@ -30,6 +30,12 @@
 <script>
 import _ from 'lodash'
 
+/*
+ * @group ComponentesReutilizados
+ * @vuese
+ * Este componente se encarga de incializar el slider (o carosuel)
+ * de imagenes provisto por `OwlCarousel`.
+ */
 export default {
   name: 'byrn-image-carousel',
   mounted () {

@@ -222,6 +222,13 @@ const OWNERS = [
     last_name: 'González'
   }
 ]
+
+/*
+ * @group ComponentesReutilizados
+ * @vuese
+ * Este componente engolba todos los controles del formulario
+ * usados para crear una nueva propiedad (`estate`).
+ */
 export default {
   name: 'estate-form',
   data () {

@@ -42,6 +42,10 @@ import { mapActions } from 'vuex'
 import { actions as estatesActions } from '@/store-modules/estates/types'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 
+// @group Vistas
+// @vuese
+// Esta vista muestra todas las propiedades marcadas como "favoritas"
+// por le usuario de BYRN.
 export default {
   name: 'byrn-favorites-view',
   data: () => ({

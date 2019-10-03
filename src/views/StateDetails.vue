@@ -125,6 +125,13 @@ import endpoints from '../endpoints'
 import ByrnImageCarousel from '@/components/shared-components/ImageCarousel.vue'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
+/*
+ * @group Vistas
+ * @vuese
+ * Este componente es el detalle de una propiedad. Es la vista que se
+ * muestra después de seleccionar una propiedad desde el listado o desde
+ * algún carrusel o la sección de favoritos.
+ */
 export default {
   name: 'states-listing-component',
   data () {

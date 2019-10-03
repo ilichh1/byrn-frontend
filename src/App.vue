@@ -12,6 +12,8 @@ import Header from '@/components/HeaderComponent'
 import Footer from '@/components/FooterComponent'
 import Loader from '@/components/shared-components/ByrnLoaderComponent'
 
+// @vuese
+// Componente de inicio de toda la aplicación
 export default {
   name: 'App',
   components: {

@@ -1,6 +1,5 @@
 <template>
   <div class="site-wrap">
-
       <div
       class="site-blocks-cover inner-page-cover overlay"
       style="background-image: url(images/summer-grass.jpg);"
@@ -145,7 +144,6 @@
 </template>
 
 <script>
-
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 
 const FEATURED_PROPERTIES = [
@@ -196,6 +194,10 @@ const FEATURED_PROPERTIES = [
   }
 ]
 
+// @group Vistas
+// @vuese
+// Esta es la vista que se muestra al inicio de la aplicación,
+// cuando todavía no se inicia sesión.
 export default {
   name: 'home-component',
   data () {

@@ -136,30 +136,87 @@ import RangeSlider from 'vue-range-slider'
 import 'vue-range-slider/dist/vue-range-slider.css'
 import _ from 'lodash'
 
+/**
+ * @group ComponentesReutilizados
+ * @vuese
+ * Este componente se encarga de incializar el slider (o carosuel)
+ * de imagenes provisto por `OwlCarousel`.
+ */
 export default {
-  name: 'FilterComponent',
+  name: 'FiltersComponent',
   data () {
     return {
+      /**
+       * @vuese
+       * Precio por metros mínimo para filtrar.
+       */
       meter_price_more_than: 100,
+      /**
+       * @vuese
+       * Precio por metros máximo para filtrar.
+       */
       meter_price_less_than: 5000,
+      /**
+       * @vuese
+       * Área en mts2 del terreno mínima.
+       */
       surface_area_more_than: 100,
+      /**
+       * @vuese
+       * Área en mts2 del terreno máxima.
+       */
       surface_area_less_than: 100000,
+      /**
+       * @vuese
+       * Tipo de de propiedad.
+       * @type number
+       */
       estate_type: 1,
+      /**
+       * @vuese
+       * Bandera para saber si la propiedad esta en venta o renta.
+       * @type `1` | `0`
+       */
       sell_or_rent: 0,
+      /**
+       * @vuese
+       * Ordenamiento ascendente o descendente.
+       */
       orderBy_order: 'ASC',
+      /**
+       * @vuese
+       * Columna por la cual se realizará el ordenamiento.
+       */
       orderBy_attribute: 'created_at',
       itemsByPage: 10
     }
   },
   mounted () {
+    // @vuese
+    // Este evento se dispara al componente padre para indicar
+    // que los controles del filtro fueron alterados.
     this.$emit('filtersChanged', this.filters)
   },
   methods: {
+    /**
+     * @vuese
+     * Este método se dispara con la función `debounce` de la
+     * librería `lodash` para evitar que se disparen los filtros
+     * en cada interacción con los controles.
+     * Emite un evento al padre.
+     */
     onFilterChanged: _.debounce((vm) => {
+      // @vuese
+      // Este evento se dispara al componente padre para indicar
+      // que los controles del filtro fueron alterados.
       vm.$emit('filtersChanged', vm.filters)
     }, 100)
   },
   computed: {
+    /**
+     * @vuese
+     * Los filtros finales para el componente padre.
+     */
     filters () {
       const {
         meter_price_more_than,

@@ -78,10 +78,25 @@ import { mapGetters } from 'vuex'
 import { getters as mainGetters } from '@/store'
 import { setTimeout } from 'timers'
 
+/**
+ * @group ComponentesReutilizados
+ * @vuese
+ * Este componente es el loader con un dibujo de una lupa y el logo
+ * de BYRN que se muestra en toda la aplicación cada vez que se
+ * hace una petición HTTP.
+ */
 export default {
   name: 'byrn-loader',
   data: () => ({
+    /**
+     * @vuese
+     * Bandera para saber si el _loader_ es visible o no.
+     */
     isModalVisible: false,
+    /**
+     * @vuese
+     * Esta bandera se encarga de cambiar la propiedad `display` de CSS.
+     */
     isModalHidden: true
   }),
   mounted () {
@@ -91,6 +106,11 @@ export default {
     window.removeEventListener('transitionend', this.onModalTransitionEnd)
   },
   computed: {
+    /**
+     * @vuese
+     * Mapeo de los getters del estado para comunicarse
+     * con el resto de la aplicación.
+     */
     ...mapGetters({
       modalState: mainGetters.isModalHidden
     })
@@ -101,15 +121,28 @@ export default {
     }
   },
   methods: {
+    /**
+     * @vuese
+     * Se dispara cuando el loader se debe de esconder.
+     */
     onModalHide () {
       this.isModalVisible = false
       window.document.body.classList.remove('no-overflow')
     },
+    /**
+     * @vuese
+     * Este método es usado para mostrar el modal.
+     */
     onModalShow () {
       this.isModalHidden = false
       this.isModalVisible = true
       window.document.body.classList.add('no-overflow')
     },
+    /**
+     * @vuese
+     * Se dispara al final de la transición para quitar
+     * las clases que afectan el scroll del sitio.
+     */
     onModalTransitionEnd (event) {
       const { target } = event
       if (target !== this.$refs.modalLoader || this.isModalVisible) { return }

@@ -63,6 +63,9 @@ import endpoints from '../endpoints'
 import { actions as authActions } from '@/store-modules/auth/types'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
+// @group Vistas
+// @vuese
+// Cuando el usuario desee iniciar sesión será enviado a esta vista
 export default {
   name: 'login-component',
   data: () => ({

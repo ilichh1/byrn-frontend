@@ -79,7 +79,12 @@
 <script>
 import endpoints from '../endpoints'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
+
+// @group Vistas
+// @vuese
+// Este componente es usado para editar el perfil del usuario
 export default {
+  name: 'edit-profile-view',
   data: () => ({
     endpoints,
     form: {

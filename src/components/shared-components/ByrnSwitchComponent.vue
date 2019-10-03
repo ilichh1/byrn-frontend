@@ -43,9 +43,17 @@ $padding: 4px;
 </style>
 
 <script>
+/**
+ * @group ComponentesReutilizados
+ * @vuese
+ * Este sencillo componente es el _switch_ utilizado para
+ * esconder o mostrar los filtros en el listado principal.
+ */
 export default {
   name: 'bryn-switch-component',
   props: {
+    // Esta bandera indica si el `switch` esta encendido o apagado.
+    // (`true` | `false`).
     value: {
       default: () => true,
       type: Boolean

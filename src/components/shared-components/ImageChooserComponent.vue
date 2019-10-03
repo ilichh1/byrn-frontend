@@ -30,7 +30,6 @@
 </template>
 
 <script>
-
 const loadSrcFromImage = (file) => new Promise((resolve, reject) => {
   var reader = new FileReader()
 
@@ -45,12 +44,33 @@ const loadSrcFromImage = (file) => new Promise((resolve, reject) => {
   }
 })
 
+/**
+ * @group ComponentesReutilizados
+ * @vuese
+ * Este componente es usado en el formulario de creación de propiedades,
+ * aunque esta planeado para su futuro uso en otros componentes.
+ */
 export default {
+  name: 'image-chooser-component',
   data: () => ({
+    /**
+     * @vuese
+     * Imagenes disponibles desde la API
+     */
     uploadedImages: [],
+    /**
+     * @vuese
+     * Imágenes que exiten en la API pero deberán ser eliminadas.
+     */
     deletedImages: []
   }),
   methods: {
+    /**
+     * @vuese
+     * Este método se dispara cada que una imagen es
+     * añadida al componente.
+     * @arg El DOMEvent disparado por el evento `change`.
+     */
     onAddedFile ({ target }) {
       const { files } = target
 
@@ -68,6 +88,13 @@ export default {
           })
       }
     },
+    /**
+     * @vuese
+     * Este evento se dispara cada vez que el usuario marca una imagen
+     * como "destacada".
+     * @arg arg El objeto _imagen_ destacado. Este objeto viene desde el arreglo
+     * de imagenes dentro del API o el arreglo de las nuevas imagenes agregadas.
+     */
     onFeaturedImage (img) {
       const { isUploadedImage } = img
       if (!isUploadedImage) {

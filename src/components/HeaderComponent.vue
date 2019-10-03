@@ -1,6 +1,5 @@
 <template>
   <header>
-
     <div class="site-mobile-menu">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -81,6 +80,9 @@ import { mapGetters, mapActions } from 'vuex'
 import { getters as authGetters } from '@/store-modules/auth/types.js'
 import { actions as mainActions } from '@/store'
 
+// @group ComponentesCompartidos
+// @vuese
+// El header usado en *todas* las páginas
 export default {
   name: 'header-component',
   computed: {

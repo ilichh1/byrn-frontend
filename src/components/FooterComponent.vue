@@ -31,6 +31,9 @@
 </template>
 
 <script>
+// @group ComponentesCompartidos
+// @vuese
+// El footer usado en *todas* las páginas
 export default {
   name: 'footer-component',
   data () {

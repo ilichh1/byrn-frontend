@@ -34,6 +34,18 @@ import {
   getters as estatesGetters
 } from '@/store-modules/estates/types'
 
+/*
+ * @group ComponentesReutilizados
+ * @vuese
+ * Este es el componete para previzualizar una propiedad.
+ * Es utilizado en varias partes de la aplicación como:
+ * * Sliders
+ * * Listado principal
+ * * Resultado de búsquedas
+ * * Carrousels
+ * Este componente también se encarga de comunicarse con
+ * `vuex` para agregar / quitar _favoritos_.
+ */
 export default {
   name: 'property-listing-component',
   methods: {

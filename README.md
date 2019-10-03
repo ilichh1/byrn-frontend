@@ -28,3 +28,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Generate documentation
+`vuese gen --outDir="docs/v0.1"`
+
+### Serve documentation
+`vuese serve --outDir="docs/v0.1"`

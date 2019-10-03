@@ -80,7 +80,14 @@
 import endpoints from '../endpoints'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
+/*
+ * @group Vistas
+ * @vuese
+ * Esta vista se le mostrará al usuario cuando el desee
+ * registrarse en el sistema.
+ */
 export default {
+  name: 'register-view',
   data: () => ({
     endpoints,
     form: {
@@ -92,9 +99,6 @@ export default {
       address: 'CALLE ##, COLONIA, ESTADO, MUNICIPIO'
     }
   }),
-  mounted () {
-    // console.log(process.env)
-  },
   methods: {
     onFormSubmit () {
       const { createUser } = this.endpoints
