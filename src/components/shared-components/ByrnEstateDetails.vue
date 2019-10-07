@@ -3,7 +3,7 @@
     <div class="col-12">
       <div class="row">
         <div class="col-12 pb-3">
-          <p>{{ estate.full_address }}</p>
+          <p>{{ estate.address }}</p>
         </div>
         <div class="col-6 text-center">
           <font-awesome-icon class="mr-2" icon="ruler-combined"/>
