@@ -35,6 +35,11 @@
                   Propiedades
                 </router-link>
               </li>
+              <li>
+                <router-link to="/favorites">
+                  Mis Favoritos
+                </router-link>
+              </li>
               <li v-if="!isUserLoggedIn">
                 <router-link to="/login" class="cta">
                   <span class="bg-primary text-white rounded hvr-grow">Iniciar Sesión</span>
@@ -46,11 +51,6 @@
                   <li>
                     <router-link to="/editp">
                       <a href="#">Editar Perfil</a>
-                    </router-link>
-                  </li>
-                  <li>
-                    <router-link to="/favorites">
-                      Mis Favoritos
                     </router-link>
                   </li>
                   <li v-if="userIsAdmin">
