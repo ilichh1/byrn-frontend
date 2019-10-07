@@ -28,10 +28,9 @@
           <ByrnEstateDetails :estate="estate"/>
         </div>
 
-        <div class="col-md-4 p-3">
-          <h2 v-if="!isLoggedIn" class="text-black">Contacta al anunciante</h2>
-
-          <form v-if="!isLoggedIn" class="p-2 mt-3" style="background: rgba(0,0,0, 0.1)">
+        <div class="col-md-4 cg">
+          <form v-if="!isLoggedIn" class="p-2 mt-3 contact-form">
+            <h2 v-if="!isLoggedIn" class="text-black ">Contacta al agente</h2>
             <div class="row form-group">
               <div class="col-md-12">
                 <label class="text-black" for="email">Correo</label>
@@ -52,7 +51,7 @@
             </div>
             <div class="row form-group">
               <div class="col-md-12">
-                <input type="submit" value="Enviar" class="btn btn-primary py-2 px-4 text-white" />
+                <input type="submit" value="Enviar" class="btn submit-button py-2 px-4 text-white" />
               </div>
             </div>
           </form>
@@ -86,7 +85,7 @@
             ></date-picker>
 
             <div class="d-flex justify-content-center">
-              <input @click.prevent="onSubmitDate()" type="submit" value="Agendar" class="mt-3 btn btn-primary py-2 px-4 text-white" />
+              <input @click.prevent="onSubmitDate()" type="submit" value="Agendar" class="mt-3 btn submit-button py-2 px-4 text-white" />
             </div>
           </div>
         </div>
@@ -245,4 +244,16 @@ export default {
 </script>
 
 <style>
+.cg {
+  margin-top: 2.4em;
+}
+.contact-form {
+  /* background-color: #83E8DA; */
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+}
+.submit-button {
+  background-color: #405474 !important;
+  border-radius: 4px;
+}
 </style>

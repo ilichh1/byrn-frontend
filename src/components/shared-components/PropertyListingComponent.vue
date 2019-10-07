@@ -11,7 +11,7 @@
       <h3><router-link :to="`/details/${estate.id}`">{{ estate.name }}</router-link></h3>
       <address class="text-truncate">{{ estate.address }}</address>
       <p class="mb-0">
-        <span class="review mr-3">$ {{ estate.price }} MXN</span>
+        <span class="review mr-3">$ {{ estate.price }}.00 MXN</span>
         <span class="review ml-3">{{ estate.area }} mts2</span>
       </p>
     </div>

@@ -14,9 +14,12 @@
 
         <div class="col-6 col-xl-2">
           <router-link to="/">
-            <h1 class="mb-0 site-logo">
+            <h1 class="mb-0 site-logo" id="logo">
+              <!--
               <img id="logo" class="animated  flipInX faster " src="/images/BYRN-LOGO.png" width="auto" height="84"
                 style="-webkit-filter:contrast(0%) brightness(0%);">
+              -->
+              REEL
             </h1>
           </router-link>
         </div>
@@ -42,7 +45,7 @@
               </li>
               <li v-if="!isUserLoggedIn">
                 <router-link to="/login" class="cta">
-                  <span class="bg-primary text-white rounded hvr-grow">Iniciar Sesión</span>
+                  <span class="login text-white rounded hvr-grow">Iniciar Sesión</span>
                 </router-link>
               </li>
               <li v-if="isUserLoggedIn" class="has-children px-4">
@@ -105,7 +108,11 @@ export default {
 </script>
 <style>
 #logo {
+  color: white;
  -webkit-animation-duration: 10s;
   -webkit-animation-delay: 1s;
+}
+.login {
+  background-color: #405474;
 }
 </style>

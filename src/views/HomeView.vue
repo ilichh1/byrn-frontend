@@ -5,22 +5,21 @@
       style="background-image: url(images/summer-grass.jpg);"
       data-aos="fade"
       data-stellar-background-ratio="1"
-    >
-      <div class="container" >
+      >
+      <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-12 ">
              <div class="row justify-content-center mb-4 ">
               <div class="col-md-8 text-center ">
-                <h1  data-aos="fade-up" class="animated  zoomIn fast ">Venta/Renta de Propiedades</h1>
-                <p   data-aos="fade-up" class="animated  zoomIn slow " data-aos-delay="100">Bienes y raíces Nuño</p>
+                <h1  data-aos="fade-up" class="animated  zoomIn fast ">Compra venta de Propiedades</h1>
+                <p   data-aos="fade-up" class="animated  zoomIn slow " data-aos-delay="100">Reel Inmobiliaria</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div style="
-
-   ;">
+      <!---
+      <div>
       <img src="images/vectores.svg" class="animated  fadeInUpBig slow  " style="position: absolute;
       width: 100%;
       height: auto;
@@ -28,7 +27,7 @@
       right: 0px;
       bottom: -6px;
       ">
-      </div>
+      </div> -->
     </div>
 
     <div class="site-section bg-light">
@@ -119,7 +118,7 @@
                 <p>Karla Mora  </p>
               </figure>
               <blockquote>
-                <p>&ldquo;La atención que me dieron desde que agende mi cita es sorprendente, gracias a BYRN encontré la propiedad que se ajustaba a mis necesidades.&rdquo;</p>
+                <p>&ldquo;La atención que me dieron desde que agende mi cita es sorprendente, gracias a REEL encontré la propiedad que se ajustaba a mis necesidades.&rdquo;</p>
               </blockquote>
             </div>
           </div>
