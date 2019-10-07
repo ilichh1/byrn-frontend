@@ -3,15 +3,15 @@
     <div class="col-12">
       <div class="row">
         <div class="col-12 pb-3">
-          <p>{{ estate.full_address }}</p>
+          <p>{{ estate.address }}</p>
         </div>
         <div class="col-6 text-center">
           <font-awesome-icon class="mr-2" icon="ruler-combined"/>
-          <span class="ml-1">{{ formatNumber(estate.surface_area) }}</span>
+          <span class="ml-1">{{ formatNumber(estate.surface_area) }} m²</span>
         </div>
         <div class="col-6 text-center">
           <font-awesome-icon class="mr-2" icon="dollar-sign"/>
-          <span class="ml-1">{{ formatNumber(estate.seller_price) }}</span>
+          <span class="ml-1">{{ formatNumber(estate.seller_price) }}.00</span>
         </div>
       </div>
     </div>
@@ -117,6 +117,7 @@ export default {
       'images',
       'ejidal_or_private',
       'commision_or_advertising',
+      'seller_price',
       'sell_or_rent',
       'estate_type',
       'business_type',
@@ -126,6 +127,7 @@ export default {
       'is_needy',
       'description',
       'city_id',
+      'full_address',
       'status'
     ]
   }),
@@ -174,18 +176,16 @@ export default {
       default: () => ({
         bathrooms: 'Baños',
         surface_area: 'Área de la superficie',
-        seller_price: 'Precio',
         meter_price: 'Precio por metro',
-        has_underground_water: '¿Tiene agua subterránea?',
+        has_underground_water: 'Agua subterránea',
         address: 'Dirección',
-        full_address: 'Dirección completa',
-        has_drinkable_water: '¿Tiene agua potable?',
-        public_light: '¿Tiene alumbrado público?',
+        has_drinkable_water: 'Agua potable',
+        public_light: 'Alumbrado público',
         created_at: 'Publicado el',
         updated_at: 'Última actualización',
         visit: 'Número de visitas',
         city: 'Ciudad',
-        sewer_system: '¿Tiene sistema de riego?'
+        sewer_system: 'Drenaje'
       })
     }
   }
