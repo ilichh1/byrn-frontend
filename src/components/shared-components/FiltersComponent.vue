@@ -94,14 +94,14 @@
                 <span class="icon-keyboard_arrow_down"></span>
               </span>
               <select id="tipo-propiedad" class="form-control rounded" v-model="estate_type">
-                <option value="1">Terreno rústico.</option>
-                <option value="2">Terreno urbano.</option>
-                <option value="3">Casa habitación.</option>
-                <option value="4">Local comercial.</option>
-                <option value="5">Bodega.</option>
-                <option value="6">Departamento.</option>
-                <option value="7">Casa campestre.</option>
-                <option value="8">Acción de sociedad.</option>
+                <option value="1">Terreno rústico</option>
+                <option value="2">Terreno urbano</option>
+                <option value="3">Casa habitación</option>
+                <option value="4">Local comercial</option>
+                <option value="5">Bodega</option>
+                <option value="6">Departamento</option>
+                <option value="7">Casa campestre</option>
+                <option value="8">Acción de sociedad</option>
                 <option value="-1">Todos</option>
               </select>
             </div>
