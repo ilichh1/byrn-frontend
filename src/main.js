@@ -4,7 +4,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import router from './router'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCogs, faCodeBranch, faChartBar, faFrown } from '@fortawesome/free-solid-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 
 // import { faCodeBranch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -17,7 +17,7 @@ import { store } from './store'
 // HighCharts
 import HighchartsVue from 'highcharts-vue'
 
-library.add(faChartBar, faCogs, faCodeBranch, faFrown)
+library.add(fas)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 const { VUE_APP_BASE_URL: baseURL } = process.env

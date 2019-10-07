@@ -99,14 +99,6 @@
         <GmapMarker
           key="map-center-marker"
           :position="{ lat: 20.623397, lng: -103.068217 }" />
-          <!-- Aquí me quedé: no pude actualizar la posicion del markador en base al centro del mapa -->
-        <!--GmapMarker
-          :key="index"
-          v-for="(m, index) in markers"
-          :position="m.position"
-          :clickable="true"
-          :draggable="true"
-          @click="center = m.position" /-->
       </GmapMap>
     </div>
     <div class="col-sm-12">

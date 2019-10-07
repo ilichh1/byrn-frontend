@@ -6,13 +6,13 @@
       data-aos="fade"
       data-stellar-background-ratio="0.5"
     >
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 text-center">
-            <h1 class="text-white">PROPIEDAD</h1>
-          </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="text-white">PROPIEDAD</h1>
         </div>
       </div>
+    </div>
     </div>
     <section class="container py-4 bg-white" id="estate-detail">
       <div class="row">
@@ -25,29 +25,7 @@
             </div>
           </div>
 
-          <div class="mt-5 p-3" style="background: rgba(0,0,0, .1);">
-            <p class="h4 mb-2 text-black">Descripcion del terreno</p>
-            <p class="mb-1 text-black">
-              <!-- Descripcion -->
-              {{ estate.description }}
-              <br>
-              Precio: $  {{ estate.seller_price }}
-              <br>
-              Descripcion: {{ estate.description }}
-              <br>
-              Superficie: {{ estate.surface_area }} m2
-              <br>
-              Precio por metro: $  {{ estate.meter_price }}
-              <br>
-              Latitud: {{ estate.latitude }}
-              <br>
-              Longitud: {{ estate.longitude }}
-              <br>
-              Domicilio: {{ estate.address }}
-              <br>
-
-              </p>
-          </div>
+          <ByrnEstateDetails :estate="estate"/>
         </div>
 
         <div class="col-md-4 p-3">
@@ -119,10 +97,12 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getters as authGetters } from '@/store-modules/auth/types'
 import DatePicker from 'vue2-datepicker'
 import endpoints from '../endpoints'
 import ByrnImageCarousel from '@/components/shared-components/ImageCarousel.vue'
+import { getters as authGetters } from '@/store-modules/auth/types'
+import ByrnEstateDetails from '@/components/shared-components/ByrnEstateDetails.vue'
+
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
 /*
@@ -257,7 +237,8 @@ export default {
   },
   components: {
     DatePicker,
-    ByrnImageCarousel
+    ByrnImageCarousel,
+    ByrnEstateDetails
   }
 }
 // console.log(datetime);

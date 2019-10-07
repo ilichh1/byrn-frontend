@@ -72,7 +72,7 @@ import FiltersComponent from '@/components/shared-components/FiltersComponent'
 import PropertyListingComponent from '@/components/shared-components/PropertyListingComponent'
 const { VUE_APP_BASE_URL: BASE_URL } = process.env
 
-/* 
+/*
  * @group Vistas
  * @vuese
  * Esta es la vista que contiene el listado principal de propiedades.

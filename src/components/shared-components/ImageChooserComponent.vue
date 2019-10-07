@@ -98,22 +98,22 @@ export default {
     onFeaturedImage (img) {
       const { isUploadedImage } = img
       if (!isUploadedImage) {
-        for(let i = 0; i < this.uploadedImages.length; i++) {
+        for (let i = 0; i < this.uploadedImages.length; i++) {
           this.$set(this.uploadedImages, i, {
             ...this.uploadedImages[i],
             featured: false
-          });
+          })
         }
-        this.featuredImage = img.id; // TODO: CHANGE THIS TO EVENT EMITS ONCE THE PARENT PASSES THE PROPS
-        return;
+        this.featuredImage = img.id // TODO: CHANGE THIS TO EVENT EMITS ONCE THE PARENT PASSES THE PROPS
+        return
       }
-      for(let i = 0; i < this.uploadedImages.length; i++) {
+      for (let i = 0; i < this.uploadedImages.length; i++) {
         this.$set(this.uploadedImages, i, {
           ...this.uploadedImages[i],
           featured: this.uploadedImages[i] === img
-        });
+        })
       }
-      this.featuredImage = null;
+      this.featuredImage = null
     },
     onDeletedImage (img) {
       const { isUploadedImage } = img
