@@ -41,7 +41,8 @@
 }
 
 .loader {
-  background: rgba(233, 248, 223, 0.4);
+  /* background: rgba(233, 248, 223, 0.4); */
+  background-color: white;
   transition: opacity 300ms ease-in-out;
   opacity: 1;
 }
