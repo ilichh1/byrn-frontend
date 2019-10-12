@@ -5,7 +5,7 @@
       <div class="row align-items-center justify-content-center text-center">
           <div class="col-12">
             <!-- <h2 class="footer-heading text-white">REEL</h2> -->
-            <p class="text-white">REEL INMOBILIARIA ® </p>
+            <p class="text-white">Copyright © 2019, REEL INMOBILIARIA</p>
           </div>
 
           <!--
@@ -15,7 +15,6 @@
             <a target="_blank" href="https://twitter.com/BinesByrn" class="pl-3 pr-3"><span class="icon-twitter text-white"></span></a>
             <a target="_blank" href="https://www.instagram.com/bienesbyrn/?hl=es-la" class="pl-3 pr-3 text-white"><span class="icon-instagram"></span></a>
           </div>
-          
           <div class="col-12">
             <h2 class="footer-heading text-white ">Contacto</h2>
             <p class= "text-white">

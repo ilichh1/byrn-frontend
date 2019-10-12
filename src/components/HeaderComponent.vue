@@ -8,9 +8,9 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    <section class="site-navbar container py-0 " role="banner">
+    <section class="site-navbar py-0 " role="banner">
       <!-- <div class="container"> -->
-      <div class="row align-items-center">
+      <div class="row align-items-center nv-r">
 
         <div class="col-6 col-xl-2">
           <router-link to="/">
@@ -28,14 +28,14 @@
           <nav class="site-navigation position-relative text-right" role="navigation">
 
             <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-              <li class="active hvr-grow">
+              <li class="active">
                 <router-link to="/">
                   Inicio
                 </router-link>
               </li>
-              <li class="hvr-grow">
+              <li>
                 <router-link to="/states">
-                  Propiedades
+                  <span class="estates text-white rounded">Propiedades</span>
                 </router-link>
               </li>
               <li>
@@ -45,7 +45,7 @@
               </li>
               <li v-if="!isUserLoggedIn">
                 <router-link to="/login" class="cta">
-                  <span class="login text-white rounded hvr-grow">Iniciar Sesión</span>
+                  <span>Iniciar Sesión</span>
                 </router-link>
               </li>
               <li v-if="isUserLoggedIn" class="has-children px-4">
@@ -107,12 +107,18 @@ export default {
 }
 </script>
 <style>
+.nv-r {
+  margin: 0;
+}
 #logo {
-  color: white;
  -webkit-animation-duration: 10s;
   -webkit-animation-delay: 1s;
 }
-.login {
-  background-color: #405474;
+.estates {
+  background-color: #35cdb8;
+  padding: .4em;
+}
+.icon-menu {
+  color: #35cdb8;
 }
 </style>

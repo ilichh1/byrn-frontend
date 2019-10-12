@@ -1,14 +1,17 @@
 <template>
   <div class="d-block d-md-flex listing vertical">
-    <a> <router-link :to="`/details/${estate.id}`"
+    <a>
+      <router-link :to="`/details/${estate.id}`"
       :style="`background-image: url('${estate.image}')`"
-      class="img d-block"></router-link></a>
+      class="img d-block">
+      </router-link>
+    </a>
     <div class="lh-content">
       <span class="category">{{ estate.type }}</span>
       <span @click="toggleFavorite()" class="bookmark" :class="{ 'is-favorite': isFavorite(estate.id) }">
         <span class="icon-heart"></span>
       </span>
-      <h3><router-link :to="`/details/${estate.id}`">{{ estate.name }}</router-link></h3>
+      <h3><router-link class="property-name rounded" :to="`/details/${estate.id}`">{{ estate.name }}</router-link></h3>
       <address class="text-truncate">{{ estate.address }}</address>
       <p class="mb-0">
         <span class="review mr-3">$ {{ estate.price }}.00 MXN</span>
@@ -24,6 +27,15 @@
 }
 .bookmark.is-favorite {
   color: tomato;
+}
+.property-name {
+  background-color: #35cdb8;
+  padding: .3em .4em;
+  color: white;
+}
+.property-name:hover {
+  background-color: #189c88;
+  color: white;
 }
 </style>
 

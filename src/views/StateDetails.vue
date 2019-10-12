@@ -1,5 +1,6 @@
 <template>
   <div class="site-wrap bg-white">
+    <!--
     <div
       class="site-blocks-cover inner-page-cover overlay"
       style="background-image: url(/images/summer-grass.jpg);"
@@ -13,7 +14,7 @@
         </div>
       </div>
     </div>
-    </div>
+    </div> -->
     <section class="container py-4 bg-white" id="estate-detail">
       <div class="row">
         <div class="col-md-8">

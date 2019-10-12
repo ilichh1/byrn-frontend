@@ -1,7 +1,7 @@
 <template>
   <div class="site-wrap">
-    <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(images/summer-grass.jpg);"
-      data-stellar-background-ratio="0.5">
+    <!--
+    <div class="site-blocks-cover inner-page-cover overlay" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-10 mt-5" data-aos="fade-up" data-aos-delay="400">
@@ -11,13 +11,12 @@
                 <p class="mb-0">Elige la propiedad que complete tu vida.</p>
               </div>
             </div>
-          </div>
-          <!--div class="col-md-12">
+          </div><div class="col-md-12">
             <FiltersComponent @filtersChanged="onFiltersChanged($event)"></FiltersComponent>
-          </div-->
+          </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="site-section">
       <div class="container">

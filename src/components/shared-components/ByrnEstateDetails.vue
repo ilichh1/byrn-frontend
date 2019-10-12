@@ -7,11 +7,11 @@
         </div>
         <div class="col-6 text-center">
           <font-awesome-icon class="mr-2" icon="ruler-combined"/>
-          <span class="ml-1">{{ formatNumber(estate.surface_area) }} m²</span>
+          <span class="ml-1 font-weight-bold imp">{{ formatNumber(estate.surface_area) }} m²</span>
         </div>
         <div class="col-6 text-center">
           <font-awesome-icon class="mr-2" icon="dollar-sign"/>
-          <span class="ml-1">{{ formatNumber(estate.seller_price) }}.00</span>
+          <span class="ml-1 font-weight-bold imp">{{ formatNumber(estate.seller_price) }}.00</span>
         </div>
       </div>
     </div>
@@ -61,8 +61,6 @@ const mapIconName = property => {
   switch(property) {
     case 'surface_area':
       return 'ruler-combined'
-    case 'visit':
-      return 'eye'
     case 'seller_price':
       return 'dollar-sign'
     case 'meter_price':
@@ -71,7 +69,6 @@ const mapIconName = property => {
       return 'water'
     case 'has_drinkable_water':
       return 'glass-whiskey'
-    case 'full_address':
     case 'address':
       return 'map-marker-alt'
     case 'sewer_system':
@@ -79,7 +76,6 @@ const mapIconName = property => {
     case 'public_light':
       return 'lightbulb'
     case 'created_at':
-    case 'updated_at':
       return 'calendar-alt'
     case 'city':
       return 'building'
@@ -128,6 +124,8 @@ export default {
       'description',
       'city_id',
       'full_address',
+      'visit',
+      'updated_at',
       'status'
     ]
   }),
@@ -176,7 +174,7 @@ export default {
       default: () => ({
         bathrooms: 'Baños',
         surface_area: 'Área de la superficie',
-        meter_price: 'Precio por metro',
+        meter_price: 'Precio por m²',
         has_underground_water: 'Agua subterránea',
         address: 'Dirección',
         has_drinkable_water: 'Agua potable',
@@ -191,3 +189,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .imp {
+    font-size: 1.7em;
+  }
+  .vue-map {
+    border-radius: 0.25rem !important;
+  }
+</style>

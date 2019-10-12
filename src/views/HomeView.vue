@@ -2,17 +2,16 @@
   <div class="site-wrap">
       <div
       class="site-blocks-cover inner-page-cover overlay"
-      style="background-image: url(images/summer-grass.jpg);"
       data-aos="fade"
       data-stellar-background-ratio="1"
       >
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-12 ">
-             <div class="row justify-content-center mb-4 ">
-              <div class="col-md-8 text-center ">
-                <h1  data-aos="fade-up" class="animated  zoomIn fast ">Compra venta de Propiedades</h1>
-                <p   data-aos="fade-up" class="animated  zoomIn slow " data-aos-delay="100">Reel Inmobiliaria</p>
+             <div class="row justify-content-center mb-4">
+              <div class="col-md-12 text-center">
+                <h1  data-aos="fade-up" class="animated  zoomIn fast ">Encuentra la propiedad perfecta para ti.</h1>
+                <p   data-aos="fade-up" class="animated  zoomIn slow " data-aos-delay="100">Busca entre todas las opciones que tenemos para ti.</p>
               </div>
             </div>
           </div>
