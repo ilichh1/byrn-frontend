@@ -15,7 +15,7 @@
       </div>
     </div>
     </div> -->
-    <section class="container py-4 bg-white" id="estate-detail">
+    <section class="container py-4 bg-white" id="estate-details">
       <div class="row">
         <div class="col-md-8">
           <h2 class="text-black">{{ estate.name }}</h2>
@@ -171,7 +171,7 @@ export default {
           autoplayHoverPause: false,
           nav: true,
           navText: [
-            '<span class="icon-keyboard_arrow_left";><span>',
+            '<span class="icon-keyboard_arrow_left"><span>',
             '<span class="icon-keyboard_arrow_right"></span>'
           ],
           responsive: {

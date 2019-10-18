@@ -12,5 +12,6 @@ export const estateMapFunction = (estate) => ({
   address: estate.address,
   price: estate.seller_price,
   area: estate.surface_area,
+  description: estate.description,
   visit_count: Math.floor(Math.random() * 100)
 })

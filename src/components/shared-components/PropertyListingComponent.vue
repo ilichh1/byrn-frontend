@@ -13,9 +13,10 @@
       </span>
       <h3><router-link class="property-name rounded" :to="`/details/${estate.id}`">{{ estate.name }}</router-link></h3>
       <address class="text-truncate">{{ estate.address }}</address>
+      <p>{{ estate.description }}</p>
       <p class="mb-0">
-        <span class="review mr-3">$ {{ estate.price }}.00 MXN</span>
-        <span class="review ml-3">{{ estate.area }} mts2</span>
+        <span class="review mr-3">$ {{ formatNumber(estate.price) }}.00 MXN</span>
+        <span class="review ml-3">{{ formatNumber(estate.area) }} m²</span>
       </p>
     </div>
   </div>
@@ -36,6 +37,9 @@
 .property-name:hover {
   background-color: #189c88;
   color: white;
+}
+.review {
+  font-size: 1em !important;
 }
 </style>
 
@@ -76,7 +80,8 @@ export default {
   computed: {
     ...mapGetters({
       isFavorite: estatesGetters.isEstateInFavorites
-    })
+    }),
+    formatNumber: () => val => String(val).replace(/(\d)(?=(\d{3})+(?:\.\d+)?$)/g, "$1,"),
   },
   props: {
     estate: {
@@ -88,6 +93,7 @@ export default {
           type: 'Terreno en venta',
           name: 'Terreno en la barranca Zapopana',
           visit_count: 16,
+          description: 'Propiedad muy buena oferta.',
           address: 'Camino a la barranca 16, Colonia, Zapotlanejo, Jalisco',
           price: 1000000
         }
