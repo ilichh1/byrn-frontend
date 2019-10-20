@@ -8,7 +8,9 @@ const mapStateType = (type) => estateTypes[type]
 
 export const estateMapFunction = (estate) => ({
   id: estate.id,
-  type: mapStateType(estate.estate_type),
+  // La validación en la propiedad siguiente se hace porque dependiendo del
+  // servico, el backend envia respuestas distintas
+  type: estate.estate_type.name || mapStateType(estate.estate_type),
   image: estate.images[0] ? estate.images[0].url : 'images/img_1.jpg',
   name: estate.name,
   address: estate.address,
