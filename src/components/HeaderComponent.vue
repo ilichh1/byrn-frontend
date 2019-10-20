@@ -8,7 +8,7 @@
       </div>
       <div class="site-mobile-menu-body"></div>
     </div>
-    <section class="site-navbar py-0 " role="banner">
+    <section :style="{ backgroundColor: !isPageOnTop ? 'transparent' : '#35cdb8' }" class="site-navbar py-0 " role="banner">
       <!-- <div class="container"> -->
       <div class="row align-items-center nv-r">
 
@@ -88,6 +88,9 @@ import { actions as mainActions } from '@/store'
 // El header usado en *todas* las páginas
 export default {
   name: 'header-component',
+  data: () => ({
+    isPageOnTop: false
+  }),
   computed: {
     ...mapGetters([
       authGetters.isUserLoggedIn,
@@ -95,7 +98,23 @@ export default {
       'getUser'
     ])
   },
+  created() {
+    window.addEventListener('scroll', this.onWindowScroll)
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.onWindowScroll)
+  },
   methods: {
+    onWindowScroll(e) {
+      if (!e) { return }
+      const { target } = e
+      let top  = window.pageYOffset || target.documentElement.scrollTop;
+      if (top < 32) {
+        this.isPageOnTop = false
+        return;
+      }
+      this.isPageOnTop = true
+    },
     onLogOut () {
       this.logout()
         .then(() => this.$router.replace('/'))
@@ -120,5 +139,8 @@ export default {
 }
 .icon-menu {
   color: #35cdb8;
+}
+.site-navbar {
+  transition: background 500ms ease-in-out;
 }
 </style>
