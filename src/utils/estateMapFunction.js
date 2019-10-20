@@ -4,9 +4,11 @@ const estateTypes = {
   3: 'Casa habitación'
 }
 
+const mapStateType = (type) => estateTypes[type]
+
 export const estateMapFunction = (estate) => ({
   id: estate.id,
-  type: estateTypes[estate.estate_type],
+  type: mapStateType(estate.estate_type),
   image: estate.images[0] ? estate.images[0].url : 'images/img_1.jpg',
   name: estate.name,
   address: estate.address,
