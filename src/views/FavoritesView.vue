@@ -27,7 +27,9 @@
                 v-for="e in favorites"
                 :key="`favorite-${e.id}`"
                 class="col-12 col-md-6 col-lg-3 px-2">
-                <PropertyListingComponent :estate="e"/>
+                <PropertyListingComponent
+                  @favoriteChanged="onFavoriteChange"
+                  :estate="e"/>
               </div>
             </div>
           </div>
@@ -52,12 +54,18 @@ export default {
     favorites: []
   }),
   mounted () {
-    this.getFavorites()
+    this.loadFavorites();
+  },
+  methods: {
+    onFavoriteChange(property) {
+      this.loadFavorites();
+    },
+    loadFavorites() {
+      this.getFavorites()
       .then(res => {
         this.favorites = res
       })
-  },
-  methods: {
+    },
     ...mapActions({
       getFavorites: estatesActions.getAllFavorites
     })
