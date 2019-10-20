@@ -1,23 +1,5 @@
 <template>
   <div class="site-wrap">
-    <!--
-    <div class="site-blocks-cover inner-page-cover overlay" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
-          <div class="col-md-10 mt-5" data-aos="fade-up" data-aos-delay="400">
-            <div class="row justify-content-center mt-5">
-              <div class="col-md-8 text-center ">
-                <h1>Propiedades disponibles</h1>
-                <p class="mb-0">Elige la propiedad que complete tu vida.</p>
-              </div>
-            </div>
-          </div><div class="col-md-12">
-            <FiltersComponent @filtersChanged="onFiltersChanged($event)"></FiltersComponent>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
     <div class="site-section">
       <div class="container">
         <div class="row">
@@ -35,6 +17,9 @@
             <h3 class="my-3">Listado</h3>
             <hr>
             <div class="row">
+              <div v-if="estates.length === 0" class="col-12">
+                <h2 class="my-5">Lo sentimos, no encontramos alguna propiedad con tus criterios</h2>
+              </div>
               <div v-for="(element, index) in estates" :key="`${element.name}-${index}`"
                 class="col-12 col-md-6 col-lg-4">
                 <state-component :estate="element"></state-component>
