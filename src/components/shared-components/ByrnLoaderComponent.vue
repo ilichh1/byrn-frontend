@@ -8,8 +8,8 @@
         <div class="loading">
             <div class="loading-icon">
                 <img src="@/assets/img/reel-loader.gif" alt="Cargando..."/>
-                <div v-if="!url && html" v-html="html"></div>
-                <slot></slot>
+                <!-- div v-if="!url && html" v-html="html"></div -->
+                <!-- slot></slot -->
             </div>
             <div class="loading-label">Cargando...</div>
         </div>
