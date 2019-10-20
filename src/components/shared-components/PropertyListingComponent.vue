@@ -68,9 +68,17 @@ export default {
     toggleFavorite () {
       if (this.isFavorite(this.estate.id)) {
         this.deleteFavorite(this.estate.id)
+        this.$emit('favoriteChanged', {
+          ...this.estate,
+          isFavorite: false
+        })
         return
       }
       this.saveFavorite(this.estate.id)
+      this.$emit('favoriteChanged', {
+        ...this.estate,
+        isFavorite: true
+      })
     },
     ...mapActions([
       estatesActions.saveFavorite,
