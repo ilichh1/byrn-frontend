@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "docs": "vuese gen --outDir=\"public/docs/v0.1\" && vuese serve --outDir=\"public/docs/v0.1\""
+    "docs": "vuese gen --outDir=\"public/docs/\" && vuese serve --outDir=\"public/docs/\""
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
