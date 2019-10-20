@@ -17,15 +17,12 @@
     </div> -->
     <section class="container py-4 bg-white" id="estate-details">
       <div class="row">
+        <div class="col-12 block-13 mt-5 pt-4 mb-4">
+          <ByrnImageCarousel :images="estateImages"/>
+        </div>
         <div class="col-md-8">
           <h2 class="text-black">{{ estate.name }}</h2>
           <hr>
-          <div class="row">
-            <div class="col-12 block-13">
-              <ByrnImageCarousel :images="estateImages"/>
-            </div>
-          </div>
-
           <ByrnEstateDetails :estate="estate"/>
         </div>
 
@@ -146,6 +143,7 @@ export default {
     this.$http.get(`${BASE_URL}/${estates}/${id}`)
       .then(({ data: estate }) => {
         this.estate = estate
+        this.form.message = `Hola, estoy interesado en ${estate.name}, ${estate.address}, Por favor contactame con más información.`
       })
   },
   methods: {
